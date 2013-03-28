@@ -77,7 +77,7 @@ public class systemUserFunc extends com.wavemaker.runtime.javaservice.JavaServic
 
     public systemUserFunc() {
        super(INFO);
-       //dbServices = (Dbwaveerp) RuntimeAccess.getInstance().getServiceBean("Dbwaveerp");
+       //dbServices = (Dbwaveerp) RuntimeAccess.getInstance().getServiceBean("dbwaveerp");
     }
 
     // Added by Jammi Dee 10/12/2012
