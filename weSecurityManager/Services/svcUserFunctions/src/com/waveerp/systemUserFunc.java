@@ -493,9 +493,9 @@ public class systemUserFunc extends com.wavemaker.runtime.javaservice.JavaServic
                 }                         
                 
                 
-                tblPerson.setJuid( pJuid );  
-                tblPerson.setEntityid( pEntityId );
-                tblPerson.setPartyid( pPartyId );
+                tblPerson.setJuid( pJuid );  //originally comments, not required for update
+                tblPerson.setEntityid( pEntityId ); //originally comments, not required for update
+                tblPerson.setPartyid( pPartyId ); //originally comments, not required for update
                 tblPerson.setTitle( pTitle );
                 tblPerson.setFirstname( pFirstName );
                 tblPerson.setMiddlename( pMiddleName );
@@ -533,7 +533,7 @@ public class systemUserFunc extends com.wavemaker.runtime.javaservice.JavaServic
                 tblPerson.setUserjuid( pUserJuid );
                 tblPerson.setSstatus( pStatus );
                 tblPerson.setPid( pPid );
-                tblPerson.setDeleted( 0 );
+                tblPerson.setDeleted( 0 ); //originally comments, not required for update
                 
                 //dbServices.begin();
                 
@@ -541,7 +541,7 @@ public class systemUserFunc extends com.wavemaker.runtime.javaservice.JavaServic
                     
                 //dbServices.commit();
                 
-                updatePerson( tblPerson );
+                updatePerson( tblPerson ); //just to test another method of update.
                 
                 
             } catch (Exception e) {
