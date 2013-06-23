@@ -1,0 +1,27 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbwaveerp.data.Wtmtestbundydata" table="wtmtestbundydata" dynamic-insert="false" dynamic-update="false">
+        <id name="juid" type="string">
+            <column name="juid" length="36"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="deviceid" type="string">
+            <column name="deviceid" length="20"/>
+        </property>
+        <property name="badge" type="string">
+            <column name="badge" length="20"/>
+        </property>
+        <property name="attdate" type="date">
+            <column name="attdate" length="10"/>
+        </property>
+        <property name="atttime" type="time">
+            <column name="atttime" length="8"/>
+        </property>
+        <property name="attdatetime" type="timestamp">
+            <column name="attdatetime" length="19" not-null="true"/>
+        </property>
+        <property name="atttype" type="string">
+            <column name="atttype" length="5"/>
+        </property>
+    </class>
+</hibernate-mapping>

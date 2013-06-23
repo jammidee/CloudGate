@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="svcConnProfileFunction.spring.xml" type="JavaService" CRUDService="false" class="com.waveerp.sysConnProfileFunc" id="svcConnProfileFunction">
+    <operation name="getConnProfileValue">
+        <parameter isList="false" typeRef="java.lang.String" name="pConn"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pField"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="updateConnProfile">
+        <parameter isList="false" typeRef="java.lang.String" name="pJuid"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pDescription"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pDbEngine"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pDbUrl"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pDbDriver"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pDbUsername"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pDbPassword"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pStatus"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="createConnProfile">
+        <parameter isList="false" typeRef="java.lang.String" name="pEntityId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pConnId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pDescription"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pDbEngine"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pDbUrl"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pDbDriver"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pDbUsername"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pDbPassword"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <dataobjects/>
+</service>

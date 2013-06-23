@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="svcUpload.spring.xml" type="JavaService" CRUDService="false" class="com.waveerp.systemUpload" id="svcUpload">
+    <operation name="uploading">
+        <parameter isList="false" typeRef="org.springframework.web.multipart.MultipartFile" name="file"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <dataobjects>
+        <dataobject supportsQuickData="false" name="MultipartFile" javaType="org.springframework.web.multipart.MultipartFile">
+            <element allowNull="false" isList="true" typeRef="byte" name="bytes"/>
+            <element allowNull="false" isList="false" typeRef="java.lang.String" name="contentType"/>
+            <element allowNull="false" isList="false" typeRef="boolean" name="empty"/>
+            <element allowNull="false" isList="false" typeRef="java.io.InputStream" name="inputStream"/>
+            <element allowNull="false" isList="false" typeRef="java.lang.String" name="name"/>
+            <element allowNull="false" isList="false" typeRef="java.lang.String" name="originalFilename"/>
+            <element allowNull="false" isList="false" typeRef="long" name="size"/>
+        </dataobject>
+    </dataobjects>
+</service>

@@ -1,0 +1,24 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbwaveerp.data.Tbltkstrack" table="tbltkstrack" dynamic-insert="false" dynamic-update="false">
+        <id name="seqid" type="integer">
+            <column name="seqid"/>
+            <generator class="identity"/>
+        </id>
+        <property name="juid" type="string">
+            <column name="juid" length="36" not-null="true"/>
+        </property>
+        <property name="ticketid" type="string">
+            <column name="ticketid" length="50" not-null="true"/>
+        </property>
+        <property name="logdate" type="timestamp">
+            <column name="logdate" length="19" not-null="true"/>
+        </property>
+        <property name="statusid" type="string">
+            <column name="statusid" length="50" not-null="true"/>
+        </property>
+        <property name="clock" type="string">
+            <column name="clock" length="50"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="svcMediaLibFunction" class="com.waveerp.systemMediaLib" CRUDService="false" type="JavaService" springFile="svcMediaLibFunction.spring.xml">
+    <operation name="DeletFile">
+        <parameter name="pPath" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pFileName" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="DeleteMediaFromMysql">
+        <parameter name="pUserId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAppId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pFileName" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="GetFileLength">
+        <parameter name="pPath" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pFileName" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="long" isList="false"/>
+    </operation>
+    <operation name="InsertMediaToMySql">
+        <parameter name="pUserId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAppId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pFileName" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pFilext" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="ReadMediaToFile">
+        <parameter name="pUserId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAppId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pFileName" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="ReadMediaToFilesss">
+        <parameter name="pUserId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAppId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pFileName" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="deleteTempDir">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="deleteUploadDir">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="getColCount">
+        <return typeRef="int" isList="false"/>
+    </operation>
+    <operation name="getDriver">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="getPw">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="getQuerystring">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="getTablename">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="getUser">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="listTempDir">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="listTempDirForObjectTree">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="listUploadDirForObjectTree">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="makeSystemDir">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="setColCount">
+        <parameter name="i" typeRef="int" isList="false"/>
+    </operation>
+    <operation name="setDriver">
+        <parameter name="string" typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="setPw">
+        <parameter name="string" typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="setQuerystring">
+        <parameter name="string" typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="setTablename">
+        <parameter name="string" typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="setUser">
+        <parameter name="string" typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <dataobjects/>
+</service>

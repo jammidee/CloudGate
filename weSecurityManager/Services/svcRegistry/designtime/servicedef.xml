@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="svcRegistry.spring.xml" type="JavaService" CRUDService="false" class="com.waveerp.registrySystem" id="svcRegistry">
+    <operation name="writeRegistry">
+        <parameter isList="false" typeRef="java.lang.String" name="pEntity"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pAppId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pUserId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pVarname"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pVarvalue"/>
+        <return isList="false" typeRef="boolean"/>
+    </operation>
+    <operation name="getUserId">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="checkRegistry">
+        <parameter isList="false" typeRef="java.lang.String" name="pEntity"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pAppId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pUserId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pVarname"/>
+        <return isList="false" typeRef="boolean"/>
+    </operation>
+    <operation name="writeAppRegistry">
+        <parameter isList="false" typeRef="java.lang.String" name="pAppid"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pVarname"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pVarvalue"/>
+        <return isList="false" typeRef="boolean"/>
+    </operation>
+    <operation name="execNonQuery">
+        <parameter isList="false" typeRef="java.lang.String" name="eQuery"/>
+        <return isList="false" typeRef="boolean"/>
+    </operation>
+    <operation name="resetRegistry">
+        <parameter isList="false" typeRef="java.lang.String" name="pEntity"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pUserId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pPassword"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pUsername"/>
+        <return isList="false" typeRef="boolean"/>
+    </operation>
+    <operation name="authenticateRegistry">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="readRegistry">
+        <parameter isList="false" typeRef="java.lang.String" name="pEntity"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pAppId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pUserId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pVarname"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="saveToRegistry">
+        <parameter isList="false" typeRef="java.lang.String" name="pIdNum"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pPassword"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pAppId"/>
+        <return isList="false" typeRef="boolean"/>
+    </operation>
+    <operation name="readCounter">
+        <parameter isList="false" typeRef="java.lang.String" name="pPrefix"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pKey"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pAppId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pEntity"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="getQueryResult">
+        <parameter isList="false" typeRef="java.lang.String" name="sQuery"/>
+        <return isList="true" typeRef="com.dbwaveerp.data.Tbluser"/>
+    </operation>
+    <operation name="saveCounter">
+        <parameter isList="false" typeRef="java.lang.String" name="pPrefix"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pAppId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pKey"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pEntity"/>
+        <return isList="false" typeRef="boolean"/>
+    </operation>
+    <operation name="readRegistryDefault">
+        <parameter isList="false" typeRef="java.lang.String" name="pEntity"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pAppId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pUserId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pVarname"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pDefa"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="readAppRegistry">
+        <parameter isList="false" typeRef="java.lang.String" name="pAppid"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pVarname"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="execQuery">
+        <parameter isList="false" typeRef="java.lang.String" name="sQuery"/>
+        <return isList="true" typeRef="com.dbwaveerp.data.Tblregistry"/>
+    </operation>
+    <dataobjects/>
+</service>

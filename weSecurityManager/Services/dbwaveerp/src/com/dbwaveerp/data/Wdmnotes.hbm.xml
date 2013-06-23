@@ -1,0 +1,21 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbwaveerp.data.Wdmnotes" table="wdmnotes" dynamic-insert="false" dynamic-update="false">
+        <id name="juid" type="string">
+            <column name="juid" length="36"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="entityid" type="string">
+            <column name="entityid" length="20"/>
+        </property>
+        <property name="siteid" type="string">
+            <column name="siteid" length="20"/>
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="200" not-null="true"/>
+        </property>
+        <property name="textdata" type="string">
+            <column name="textdata" length="65535"/>
+        </property>
+    </class>
+</hibernate-mapping>

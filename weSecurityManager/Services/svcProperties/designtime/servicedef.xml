@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="svcProperties.spring.xml" type="JavaService" CRUDService="false" class="com.waveerp.systemProperties" id="svcProperties">
+    <operation name="WriteProperty">
+        <parameter isList="false" typeRef="java.lang.String" name="pKey"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pValue"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="ReadProperty">
+        <parameter isList="false" typeRef="java.lang.String" name="pKey"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <dataobjects/>
+</service>

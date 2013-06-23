@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="svcBinaryFunction.spring.xml" type="JavaService" CRUDService="false" class="com.waveerp.systemBinary" id="svcBinaryFunction">
+    <operation name="InsertMediaToMySql">
+        <parameter isList="false" typeRef="java.lang.String" name="pUserId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pEntity"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pAppId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pFileName"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pFilext"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="getDriver">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="setColCount">
+        <parameter isList="false" typeRef="int" name="i"/>
+    </operation>
+    <operation name="getUser">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="setTablename">
+        <parameter isList="false" typeRef="java.lang.String" name="string"/>
+    </operation>
+    <operation name="setQuerystring">
+        <parameter isList="false" typeRef="java.lang.String" name="string"/>
+    </operation>
+    <operation name="execNonQuery">
+        <parameter isList="false" typeRef="java.lang.String" name="eQuery"/>
+        <return isList="false" typeRef="boolean"/>
+    </operation>
+    <operation name="InsertTempAttachmentToMySql">
+        <parameter isList="false" typeRef="java.lang.String" name="pUserid"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pEntity"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pTicketId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pFileName"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="ReadFilefromMySQLToFile">
+        <parameter isList="false" typeRef="java.lang.String" name="pTicketId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pUserId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pFileName"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pEntity"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="setDriver">
+        <parameter isList="false" typeRef="java.lang.String" name="string"/>
+    </operation>
+    <operation name="InsertAttachmentToMySql">
+        <parameter isList="false" typeRef="java.lang.String" name="pUserId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pEntity"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pTicketId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pFileName"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pFilext"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="saveAttachment">
+        <parameter isList="false" typeRef="java.lang.String" name="pTicketId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pUserid"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pEntity"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="setUser">
+        <parameter isList="false" typeRef="java.lang.String" name="string"/>
+    </operation>
+    <operation name="getColCount">
+        <return isList="false" typeRef="int"/>
+    </operation>
+    <operation name="InsertPictureToMySql">
+        <parameter isList="false" typeRef="java.lang.String" name="ticketId"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="getTablename">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="setPw">
+        <parameter isList="false" typeRef="java.lang.String" name="string"/>
+    </operation>
+    <operation name="getPw">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="getQuerystring">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="ReadImagefromMySQLToFile">
+        <parameter isList="false" typeRef="java.lang.String" name="ticketId"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="deleteFile">
+        <parameter isList="false" typeRef="java.lang.String" name="pUserid"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pEntity"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pFileName"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <dataobjects/>
+</service>

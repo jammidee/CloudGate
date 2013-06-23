@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="scvQRCodeFunction" class="com.waveerp.QRCodeFunction" CRUDService="false" type="JavaService" springFile="scvQRCodeFunction.spring.xml">
+    <operation name="createQRCode">
+        <parameter name="sourceData" typeRef="java.lang.String" isList="false"/>
+        <parameter name="targetFile" typeRef="java.lang.String" isList="false"/>
+        <parameter name="targetSize" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <dataobjects/>
+</service>

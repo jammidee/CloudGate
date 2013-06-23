@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="svcGenerateRights.spring.xml" type="JavaService" CRUDService="false" class="com.waveerp.generateRights" id="svcGenerateRights">
+    <operation name="genRights">
+        <parameter isList="false" typeRef="java.lang.String" name="pGenerate"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pEntityId"/>
+        <return isList="false" typeRef="boolean"/>
+    </operation>
+    <dataobjects/>
+</service>

@@ -1,0 +1,39 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbwaveerp.data.Tbllog" table="tbllog" dynamic-insert="false" dynamic-update="false">
+        <id name="juid" type="string">
+            <column name="juid" length="36"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="logdatetime" type="timestamp">
+            <column name="logdatetime" length="19" not-null="true"/>
+        </property>
+        <property name="userid" type="string">
+            <column name="userid" length="50" not-null="true"/>
+        </property>
+        <property name="msg" type="string">
+            <column name="msg" length="65535" not-null="true"/>
+        </property>
+        <property name="moduleid" type="string">
+            <column name="moduleid" length="50" not-null="true"/>
+        </property>
+        <property name="proccess" type="string">
+            <column name="proccess" length="50" not-null="true"/>
+        </property>
+        <property name="serverid" type="string">
+            <column name="serverid" length="20" not-null="true"/>
+        </property>
+        <property name="appid" type="string">
+            <column name="appid" length="50" not-null="true"/>
+        </property>
+        <property name="scopeid" type="string">
+            <column name="scopeid" length="50" not-null="true"/>
+        </property>
+        <property name="stype" type="integer">
+            <column name="stype"/>
+        </property>
+        <property name="entity" type="string">
+            <column name="entity" length="50"/>
+        </property>
+    </class>
+</hibernate-mapping>

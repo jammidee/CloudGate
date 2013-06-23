@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="svcMaintenance" class="com.waveerp.maintenanceSystem" CRUDService="false" type="JavaService" springFile="svcMaintenance.spring.xml">
+    <operation name="deleteEntity">
+        <return typeRef="boolean" isList="false"/>
+    </operation>
+    <operation name="execNonQuery">
+        <parameter name="eQuery" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="boolean" isList="false"/>
+    </operation>
+    <operation name="getValue">
+        <return typeRef="com.dbwaveerp.data.Tblentity" isList="true"/>
+    </operation>
+    <operation name="insertEntity">
+        <parameter name="pEntityId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCompany" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAddr01" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAddr02" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAddr03" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pStartDate" typeRef="java.util.Date" isList="false"/>
+        <parameter name="pEndDate" typeRef="java.util.Date" isList="false"/>
+        <return typeRef="boolean" isList="false"/>
+    </operation>
+    <operation name="updateEntity">
+        <return typeRef="boolean" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="java.util.Date" name="Date" supportsQuickData="false">
+            <element name="calendarDate" typeRef="sun.util.calendar.BaseCalendar.Date" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

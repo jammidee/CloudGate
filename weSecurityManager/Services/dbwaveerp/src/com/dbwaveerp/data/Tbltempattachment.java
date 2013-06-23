@@ -1,0 +1,77 @@
+
+package com.dbwaveerp.data;
+
+
+
+/**
+ *  dbwaveerp.Tbltempattachment
+ *  05/21/2013 13:12:01
+ * 
+ */
+public class Tbltempattachment {
+
+    private Integer seqid;
+    private String juid;
+    private String entityid;
+    private String userid;
+    private String ticketid;
+    private String filename;
+    private String filext;
+
+    public Integer getSeqid() {
+        return seqid;
+    }
+
+    public void setSeqid(Integer seqid) {
+        this.seqid = seqid;
+    }
+
+    public String getJuid() {
+        return juid;
+    }
+
+    public void setJuid(String juid) {
+        this.juid = juid;
+    }
+
+    public String getEntityid() {
+        return entityid;
+    }
+
+    public void setEntityid(String entityid) {
+        this.entityid = entityid;
+    }
+
+    public String getUserid() {
+        return userid;
+    }
+
+    public void setUserid(String userid) {
+        this.userid = userid;
+    }
+
+    public String getTicketid() {
+        return ticketid;
+    }
+
+    public void setTicketid(String ticketid) {
+        this.ticketid = ticketid;
+    }
+
+    public String getFilename() {
+        return filename;
+    }
+
+    public void setFilename(String filename) {
+        this.filename = filename;
+    }
+
+    public String getFilext() {
+        return filext;
+    }
+
+    public void setFilext(String filext) {
+        this.filext = filext;
+    }
+
+}

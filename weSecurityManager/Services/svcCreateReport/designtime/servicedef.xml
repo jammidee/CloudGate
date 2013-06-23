@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="svcCreateReport" class="com.waveerp.createReport" CRUDService="false" type="JavaService" springFile="svcCreateReport.spring.xml">
+    <operation name="getMultiEngineReport">
+        <parameter name="pDBDriver" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pDBUrl" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pDBUser" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pDBPassword" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pReportPara" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pReportName" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pFormat" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="getReport">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pReportName" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="getReportWithParam">
+        <parameter name="pReportParam" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pReportName" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <dataobjects/>
+</service>

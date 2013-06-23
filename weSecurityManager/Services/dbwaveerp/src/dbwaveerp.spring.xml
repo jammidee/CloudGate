@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+
+<!-- Generated 05/21/2013 13:11:56
+
+Configuration for 'dbwaveerp' database service
+
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+
+    <bean 
+        id="dbwaveerp"
+        class="com.dbwaveerp.Dbwaveerp"
+        scope="singleton"
+        lazy-init="true">
+        <property name="dataServiceManager">
+            <ref bean="dbwaveerpDataService"/>
+        </property>
+        <property name="taskManager">
+            <ref bean="dbwaveerpTaskMgr"/>
+        </property>
+    </bean>
+
+
+    <bean 
+        class="com.wavemaker.runtime.data.spring.WMPropertyPlaceholderConfigurer">
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+        <property name="locations">
+            <list>
+                <value>classpath:dbwaveerp.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean 
+        id="dbwaveerpDataSource"
+        class="org.springframework.jdbc.datasource.DriverManagerDataSource" 
+        lazy-init="true">
+        <property name="driverClassName" value="${dbwaveerp.driverClassName}"/>
+        <property name="url" value="${dbwaveerp.connectionUrl}"/>
+        <property name="username" value="${dbwaveerp.username}"/>
+        <property name="password" value="${dbwaveerp.password}"/>
+    </bean>
+
+
+    <bean 
+        id="dbwaveerpTxMgr" 
+        class="org.springframework.orm.hibernate3.HibernateTransactionManager"
+        lazy-init="true">
+        <property name="sessionFactory">
+            <ref bean="dbwaveerpSessionFactory"/>
+        </property>
+    </bean>
+
+
+    <bean 
+        id="dbwaveerpHibernateTemplate"
+        class="org.springframework.orm.hibernate3.HibernateTemplate"
+        lazy-init="true">
+        <property name="sessionFactory"> 
+            <ref bean="dbwaveerpSessionFactory"/>
+        </property>
+    </bean>  
+
+
+    <bean 
+        id="dbwaveerpSessionFactory" 
+        class="com.wavemaker.runtime.data.spring.ConfigurationAndSessionFactoryBean"
+        lazy-init="true">
+
+        <!-- A unique name for this SessionFactory's configuration -->
+        <property name="name" value="dbwaveerp"/>
+        <property name="dataSource" ref="dbwaveerpDataSource"/>
+
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${dbwaveerp.dialect}</prop>
+                <prop key="hibernate.transaction.factory_class">
+                    org.hibernate.transaction.JDBCTransactionFactory
+                </prop>
+                <prop key="hibernate.current_session_context_class">thread</prop>
+                
+            </props> 
+        </property>
+
+        <property name="mappingResources">
+            <list>
+
+<value>com/dbwaveerp/data/Tblorglocation.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmdocasgn.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblconnprofile.hbm.xml</value>
+<value>com/dbwaveerp/data/Wtmbadgeoverrides.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmworkflow.hbm.xml</value>
+<value>com/dbwaveerp/data/Tbldatastaging01.hbm.xml</value>
+<value>com/dbwaveerp/data/Wtmtimedatalocationsum.hbm.xml</value>
+<value>com/dbwaveerp/data/Wtmleavetype.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblrights.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmcomments.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmdocuclass.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmdocuments.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmdocutype.hbm.xml</value>
+<value>com/dbwaveerp/data/Wsmschoolyear.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmfiles.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmcategories.hbm.xml</value>
+<value>com/dbwaveerp/data/ZdtTimeEntries.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblapps.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblattachment.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmworkflowdetails.hbm.xml</value>
+<value>com/dbwaveerp/data/Tbltempattachment.hbm.xml</value>
+<value>com/dbwaveerp/data/Wtmbundylist.hbm.xml</value>
+<value>com/dbwaveerp/data/Wsmclass.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblapplist.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblregistry.hbm.xml</value>
+<value>com/dbwaveerp/data/Wtmprojactivities.hbm.xml</value>
+<value>com/dbwaveerp/data/Wtmperiod.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblrightasgn.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblreportasgn.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmnotes.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmformdata.hbm.xml</value>
+<value>com/dbwaveerp/data/Tbltkstrack.hbm.xml</value>
+<value>com/dbwaveerp/data/Vueemployeeusers.hbm.xml</value>
+<value>com/dbwaveerp/data/Wlmloadbalscheme.hbm.xml</value>
+<value>com/dbwaveerp/data/Wsmroom.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmforms.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmentityasgn.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblseverity.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmgroupsite.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblorgsection.hbm.xml</value>
+<value>com/dbwaveerp/data/Wtmprojlocation.hbm.xml</value>
+<value>com/dbwaveerp/data/Wtmtimedatapair.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblmodule.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmslides.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblmedialib.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblstatus.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblorgshift.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblreportgroup.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblcomp.hbm.xml</value>
+<value>com/dbwaveerp/data/Wtmtimedataraw.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblentity.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmfolders.hbm.xml</value>
+<value>com/dbwaveerp/data/Wtmtestbundydata.hbm.xml</value>
+<value>com/dbwaveerp/data/Wlmserverlist.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblperson.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblsessions.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblcalendar.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmreportprofile.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmfrmlookup.hbm.xml</value>
+<value>com/dbwaveerp/data/Tbladmapping.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblemployeeext.hbm.xml</value>
+<value>com/dbwaveerp/data/Tbltypereq.hbm.xml</value>
+<value>com/dbwaveerp/data/Wtmtimereporttrans.hbm.xml</value>
+<value>com/dbwaveerp/data/Tbllogging.hbm.xml</value>
+<value>com/dbwaveerp/data/Tbllog.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblchargecode.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblrole.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblbrowserlist.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblaccessurl.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblroleasgn.hbm.xml</value>
+<value>com/dbwaveerp/data/Wtmtimedatalocation.hbm.xml</value>
+<value>com/dbwaveerp/data/Tbltickets.hbm.xml</value>
+<value>com/dbwaveerp/data/Tbluser.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmsiteasgn.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblsoln.hbm.xml</value>
+<value>com/dbwaveerp/data/Wsmtraining.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblorgrestday.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblorgdepartment.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblentityasgn.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmformtemplates.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblorgdivision.hbm.xml</value>
+<value>com/dbwaveerp/data/Wtmproject.hbm.xml</value>
+<value>com/dbwaveerp/data/Wdmdocasgnheader.hbm.xml</value>
+
+<value>com/dbwaveerp/data/Tblorglocation.ql.xml</value>
+<value>com/dbwaveerp/data/app-queries.ql.xml</value>
+
+            </list>
+        </property>
+
+    </bean>
+
+
+    <!-- the data service bean instance is injected into the service bean -->
+    <bean 
+        id="dbwaveerpDataService" 
+        class="com.wavemaker.runtime.data.spring.SpringDataServiceManager"
+        lazy-init="true">
+        <constructor-arg>
+            <!-- the value of the "name" property of the SessionFactory -->
+            <value>dbwaveerp</value>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="dbwaveerpHibernateTemplate"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="dbwaveerpTxMgr"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="dbwaveerpTaskMgr"/>
+        </constructor-arg>
+        <constructor-arg>
+            <map>
+                <entry key="useIndividualCRUDOperations" value="false"/>
+                <entry key="refreshEntities" value=""/> 
+            </map>
+        </constructor-arg>
+    </bean>
+
+
+    <bean 
+        id="dbwaveerpTaskMgr"
+        class="com.wavemaker.runtime.data.DefaultTaskManager"
+        lazy-init="true"/>
+
+    <bean class="com.wavemaker.runtime.service.events.EventWire"
+        lazy-init="false">
+        <property name="serviceWire" ref="dbwaveerpServiceWire"/>
+        <property name="eventListener">
+            <bean class="com.wavemaker.runtime.data.DataServiceEventListener"/>
+        </property>
+    </bean>
+
+    <bean id="dbwaveerpServiceWire"
+        class="com.wavemaker.runtime.service.reflect.ReflectServiceWire"
+        lazy-init="false" scope="singleton">
+        <property name="serviceId" value="dbwaveerp"/>
+        <property name="serviceType" ref="DataService"/>
+    </bean>
+
+</beans>

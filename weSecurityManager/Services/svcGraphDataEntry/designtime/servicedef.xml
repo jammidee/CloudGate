@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="svcGraphDataEntry.spring.xml" type="JavaService" CRUDService="false" class="com.waveerp.systemGraphDataEntry" id="svcGraphDataEntry">
+    <operation name="getDriver">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="setColCount">
+        <parameter isList="false" typeRef="int" name="i"/>
+    </operation>
+    <operation name="loadTestData">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="setDriver">
+        <parameter isList="false" typeRef="java.lang.String" name="string"/>
+    </operation>
+    <operation name="loadGraphData">
+        <parameter isList="false" typeRef="java.lang.String" name="sqlScript"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pMode"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="setQuerystring">
+        <parameter isList="false" typeRef="java.lang.String" name="string"/>
+    </operation>
+    <operation name="getColCount">
+        <return isList="false" typeRef="int"/>
+    </operation>
+    <operation name="graphBySumNodes">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="loadDataEntriesSum">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="loadDataEntries">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="loadTestData01">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="graphByCountNodes">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <dataobjects/>
+</service>

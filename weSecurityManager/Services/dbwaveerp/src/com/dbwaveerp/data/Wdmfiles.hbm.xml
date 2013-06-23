@@ -1,0 +1,51 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbwaveerp.data.Wdmfiles" table="wdmfiles" dynamic-insert="false" dynamic-update="false">
+        <id name="juid" type="string">
+            <column name="juid" length="36"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="entity" type="string">
+            <column name="entity" length="50"/>
+        </property>
+        <property name="appid" type="string">
+            <column name="appid" length="50"/>
+        </property>
+        <property name="filegrp" type="string">
+            <column name="filegrp" length="50" not-null="true"/>
+        </property>
+        <property name="filecat" type="string">
+            <column name="filecat" length="50" not-null="true"/>
+        </property>
+        <property name="userid" type="string">
+            <column name="userid" length="50"/>
+        </property>
+        <property name="filedata" type="binary">
+            <column name="filedata"/>
+        </property>
+        <property name="filename" type="string">
+            <column name="filename" length="100"/>
+        </property>
+        <property name="filext" type="string">
+            <column name="filext" length="10"/>
+        </property>
+        <property name="filesize" type="string">
+            <column name="filesize" length="16777215"/>
+        </property>
+        <property name="filedate" type="date">
+            <column name="filedate" length="10"/>
+        </property>
+        <property name="filesrc" type="string">
+            <column name="filesrc" length="5"/>
+        </property>
+        <property name="ispicture" type="integer">
+            <column name="ispicture"/>
+        </property>
+        <property name="ispdf" type="integer">
+            <column name="ispdf"/>
+        </property>
+        <property name="hasviewer" type="integer">
+            <column name="hasviewer"/>
+        </property>
+    </class>
+</hibernate-mapping>

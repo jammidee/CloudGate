@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="svcGenerateAppRights.spring.xml" type="JavaService" CRUDService="false" class="com.waveerp.generateAppRights" id="svcGenerateAppRights">
+    <operation name="generateApplicationRights">
+        <parameter isList="false" typeRef="java.lang.String" name="pAppId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pPrefix"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pEntityId"/>
+        <return isList="false" typeRef="boolean"/>
+    </operation>
+    <operation name="registerApplicationToERP">
+        <parameter isList="false" typeRef="java.lang.String" name="pAppId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pEntityId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pDesc"/>
+        <return isList="false" typeRef="boolean"/>
+    </operation>
+    <dataobjects/>
+</service>

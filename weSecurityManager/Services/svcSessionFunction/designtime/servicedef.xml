@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="svcSessionFunction" class="com.waveerp.systemSessFunc" CRUDService="false" type="JavaService" springFile="svcSessionFunction.spring.xml">
+    <operation name="countSession">
+        <parameter name="pEntityId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="int" isList="false"/>
+    </operation>
+    <operation name="createNewSession">
+        <parameter name="pEntityId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAppId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pUserId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pUserName" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="deleteExpiredSession">
+        <parameter name="pEntityId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="deleteSession">
+        <parameter name="pJuid" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="boolean" isList="false"/>
+    </operation>
+    <operation name="timeleftSession">
+        <parameter name="pJuid" typeRef="java.lang.String" isList="false"/>
+        <parameter name="timeLeft" typeRef="long" isList="false"/>
+        <return typeRef="boolean" isList="false"/>
+    </operation>
+    <operation name="updateSession">
+        <parameter name="pJuid" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <dataobjects/>
+</service>

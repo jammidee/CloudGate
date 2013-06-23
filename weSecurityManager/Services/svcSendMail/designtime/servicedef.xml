@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="svcSendMail" class="com.waveerp.sendMail" CRUDService="false" type="JavaService" springFile="svcSendMail.spring.xml">
+    <operation name="sendMsg">
+        <parameter name="strSource" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strSourceDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strSubject" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strMsg" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strDestination" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strDestDesc" typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="sendMsgSSL">
+        <parameter name="strSource" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strSourceDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strSubject" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strMsg" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strDestination" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strDestDesc" typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="sendMsgTLS">
+        <parameter name="strSource" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strSourceDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strSubject" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strMsg" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strDestination" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strDestDesc" typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="sendMsgWithAttach">
+        <parameter name="strSource" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strSourceDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strSubject" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strMsg" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strDestination" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strDestDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="strPath" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <dataobjects/>
+</service>

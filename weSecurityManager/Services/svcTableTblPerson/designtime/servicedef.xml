@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="svcTableTblPerson.spring.xml" type="JavaService" CRUDService="false" class="com.waveerp.TableTblPerson" id="svcTableTblPerson">
+    <operation name="getTableValue">
+        <parameter isList="false" typeRef="java.lang.String" name="pPartyId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pField"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <dataobjects/>
+</service>

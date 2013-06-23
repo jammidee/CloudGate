@@ -1,0 +1,45 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbwaveerp.data.Tblcomp" table="tblcomp" dynamic-insert="false" dynamic-update="false">
+        <id name="seqid" type="integer">
+            <column name="seqid"/>
+            <generator class="identity"/>
+        </id>
+        <property name="juid" type="string">
+            <column name="juid" length="36" not-null="true"/>
+        </property>
+        <property name="entityid" type="string">
+            <column name="entityid" length="20" not-null="true"/>
+        </property>
+        <property name="compid" type="string">
+            <column name="compid" length="20" not-null="true"/>
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535"/>
+        </property>
+        <property name="sstatus" type="string">
+            <column name="sstatus" length="20"/>
+        </property>
+        <property name="solnid" type="string">
+            <column name="solnid" length="20" not-null="true"/>
+        </property>
+        <property name="solndesc" type="string">
+            <column name="solndesc" length="200"/>
+        </property>
+        <property name="chargecodeid" type="string">
+            <column name="chargecodeid" length="20" not-null="true"/>
+        </property>
+        <property name="chargecodedesc" type="string">
+            <column name="chargecodedesc" length="200"/>
+        </property>
+        <property name="startdate" type="date">
+            <column name="startdate" length="10" not-null="true"/>
+        </property>
+        <property name="enddate" type="date">
+            <column name="enddate" length="10" not-null="true"/>
+        </property>
+        <property name="deleted" type="integer">
+            <column name="deleted"/>
+        </property>
+    </class>
+</hibernate-mapping>

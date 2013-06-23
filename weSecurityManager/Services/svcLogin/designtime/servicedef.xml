@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="svcLogin.spring.xml" type="JavaService" CRUDService="false" class="com.waveerp.ticketSystem" id="svcLogin">
+    <operation name="authenticate">
+        <parameter isList="false" typeRef="java.lang.String" name="pUserId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pPass"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="getUserInfo">
+        <parameter isList="false" typeRef="java.lang.String" name="pUserId"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="getUserValue">
+        <parameter isList="false" typeRef="java.lang.String" name="pUserId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pField"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <dataobjects/>
+</service>

@@ -1,0 +1,48 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbwaveerp.data.Wdmreportprofile" table="wdmreportprofile" dynamic-insert="false" dynamic-update="false">
+        <id name="juid" type="string">
+            <column name="juid" length="36"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="entityid" type="string">
+            <column name="entityid" length="20"/>
+        </property>
+        <property name="siteid" type="string">
+            <column name="siteid" length="20"/>
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="200" not-null="true"/>
+        </property>
+        <property name="textdata" type="string">
+            <column name="textdata" length="65535"/>
+        </property>
+        <property name="dbengine" type="string">
+            <column name="dbengine" length="50"/>
+        </property>
+        <property name="dburl" type="string">
+            <column name="dburl" length="200"/>
+        </property>
+        <property name="dbdriver" type="string">
+            <column name="dbdriver" length="200"/>
+        </property>
+        <property name="dbusername" type="string">
+            <column name="dbusername" length="50"/>
+        </property>
+        <property name="dbpassword" type="string">
+            <column name="dbpassword" length="50"/>
+        </property>
+        <property name="gtype" type="string">
+            <column name="gtype" length="20" not-null="true"/>
+        </property>
+        <property name="graphquery" type="string">
+            <column name="graphquery" length="65535"/>
+        </property>
+        <property name="grlegend" type="string">
+            <column name="grlegend" length="200"/>
+        </property>
+        <property name="grlabel" type="string">
+            <column name="grlabel" length="200"/>
+        </property>
+    </class>
+</hibernate-mapping>

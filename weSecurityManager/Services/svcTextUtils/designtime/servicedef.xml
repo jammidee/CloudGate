@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="svcTextUtils" class="com.waveerp.systemTextUtils" CRUDService="false" type="JavaService" springFile="svcTextUtils.spring.xml">
+    <operation name="mySQLEscape">
+        <parameter name="strSource" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="removeNonSearchables">
+        <parameter name="strSource" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <dataobjects/>
+</service>

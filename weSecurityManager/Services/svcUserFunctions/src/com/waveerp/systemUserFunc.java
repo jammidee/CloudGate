@@ -40,6 +40,8 @@
 package com.waveerp;
 
 import com.wavemaker.runtime.RuntimeAccess;
+import com.wavemaker.runtime.javaservice.JavaServiceSuperClass;
+import com.wavemaker.runtime.service.annotations.ExposeToClient;
 
 import com.wavemaker.runtime.service.annotations.ExposeToClient;
 import com.wavemaker.runtime.service.annotations.HideFromClient;
@@ -51,8 +53,12 @@ import com.wavemaker.runtime.service.RuntimeService;
 
 //Required for database
 import com.dbwaveerp.Dbwaveerp;
-import com.dbwaveerp.data.*; 
+//import com.dbwaveerp.data.*; 
 import com.dbwaveerp.data.Tblperson;
+import com.dbwaveerp.data.Tbluser;
+import com.dbwaveerp.data.TbluserId;
+import com.dbwaveerp.data.Tblemployeeext;
+import com.dbwaveerp.data.Tblrightasgn;
 
 // List management libraries
 import java.util.List;
@@ -68,16 +74,16 @@ import java.util.Date;
 import java.util.UUID;
 
 
-public class systemUserFunc extends com.wavemaker.runtime.javaservice.JavaServiceSuperClass {
+public class systemUserFunc extends JavaServiceSuperClass {
 
    private RuntimeService runtimeSvc;
-
-    //private Dbwaveerp dbServices = (Dbwaveerp) RuntimeAccess.getInstance().getService(Dbwaveerp.class);
-    private Dbwaveerp dbServices = (Dbwaveerp) RuntimeAccess.getInstance().getServiceBean("dbwaveerp");
+        
+    private Dbwaveerp dbServices = (Dbwaveerp) RuntimeAccess.getInstance().getService(Dbwaveerp.class);
+    //private Dbwaveerp dbServices = (Dbwaveerp) RuntimeAccess.getInstance().getServiceBean("dbwaveerp");
 
     public systemUserFunc() {
        super(INFO);
-       //dbServices = (Dbwaveerp) RuntimeAccess.getInstance().getServiceBean("dbwaveerp");
+       //dbServices = (Dbwaveerp) RuntimeAccess.getInstance().getServiceBean("Dbwaveerp");
     }
 
     // Added by Jammi Dee 10/12/2012
@@ -407,6 +413,11 @@ public class systemUserFunc extends com.wavemaker.runtime.javaservice.JavaServic
                                     String pPid
 
                                 ){
+
+        //Execute the SQL script using this object
+        execGenericNonQuery enq = new execGenericNonQuery();
+        //For the SQL Escape
+        systemTextUtils stu = new systemTextUtils();
                                    
         String retVal = "OK"; 
 
@@ -493,9 +504,9 @@ public class systemUserFunc extends com.wavemaker.runtime.javaservice.JavaServic
                 }                         
                 
                 
-                tblPerson.setJuid( pJuid );  //originally comments, not required for update
-                tblPerson.setEntityid( pEntityId ); //originally comments, not required for update
-                tblPerson.setPartyid( pPartyId ); //originally comments, not required for update
+                //tblPerson.setJuid( pJuid );  
+                //tblPerson.setEntityid( pEntityId );
+                //tblPerson.setPartyid( pPartyId );
                 tblPerson.setTitle( pTitle );
                 tblPerson.setFirstname( pFirstName );
                 tblPerson.setMiddlename( pMiddleName );
@@ -533,7 +544,7 @@ public class systemUserFunc extends com.wavemaker.runtime.javaservice.JavaServic
                 tblPerson.setUserjuid( pUserJuid );
                 tblPerson.setSstatus( pStatus );
                 tblPerson.setPid( pPid );
-                tblPerson.setDeleted( 0 ); //originally comments, not required for update
+                //tblPerson.setDeleted( 0 );
                 
                 //dbServices.begin();
                 
@@ -541,8 +552,51 @@ public class systemUserFunc extends com.wavemaker.runtime.javaservice.JavaServic
                     
                 //dbServices.commit();
                 
-                updatePerson( tblPerson ); //just to test another method of update.
+                //updatePerson( tblPerson );
                 
+                String sQL = "";
+                sQL = sQL + "update tblperson set ";
+                sQL = sQL + "title = '" +               stu.mySQLEscape(pTitle)                      + "', ";
+                sQL = sQL + "firstname = '" +           stu.mySQLEscape(pFirstName)                  + "', ";
+                sQL = sQL + "middlename = '" +          stu.mySQLEscape(pMiddleName)                 + "', ";
+                sQL = sQL + "lastname = '" +            stu.mySQLEscape(pLastName)                   + "', ";
+                sQL = sQL + "suffix = '" +              stu.mySQLEscape(pSuffix)                     + "', ";
+                sQL = sQL + "addr01 = '" +              stu.mySQLEscape(pAddr01)                     + "', ";
+                sQL = sQL + "addr02 = '" +              stu.mySQLEscape(pAddr02)                     + "', ";
+                sQL = sQL + "city = '" +                stu.mySQLEscape(pCity)                       + "', ";
+                sQL = sQL + "empstate = '" +            stu.mySQLEscape(pEmpState)                   + "', ";
+                sQL = sQL + "zipcode = '" +             stu.mySQLEscape(pZipCode)                    + "', ";
+                sQL = sQL + "country = '" +             stu.mySQLEscape(pCountry)                    + "', ";
+                sQL = sQL + "email = '" +               stu.mySQLEscape(pEmail)                      + "', ";
+
+                sQL = sQL + "countrycodehome = '" +     stu.mySQLEscape(pCountryCodeHome)            + "', ";
+                sQL = sQL + "areacodehome = '" +        stu.mySQLEscape(pAreaCodeHome)               + "', ";
+                sQL = sQL + "phonehome = '" +           stu.mySQLEscape(pPhoneHome)                  + "', ";
+                sQL = sQL + "extensionhome = '" +       stu.mySQLEscape(pExtensionHome)              + "', ";
+
+                sQL = sQL + "countrycodework = '" +     stu.mySQLEscape(pCountryCodeWork)            + "', ";
+                sQL = sQL + "areacodework = '" +        stu.mySQLEscape(pAreaCodeWork)               + "', ";
+                sQL = sQL + "phonework = '" +           stu.mySQLEscape(pPhoneWork)                  + "', ";
+                sQL = sQL + "extensionwork = '" +       stu.mySQLEscape(pExtensionWork)              + "', ";
+
+                sQL = sQL + "countrycodefax = '" +      stu.mySQLEscape(pCountryCodeFax)             + "', ";
+                sQL = sQL + "areacodefax = '" +         stu.mySQLEscape(pAreaCodeFax)                + "', ";
+                sQL = sQL + "phonefax = '" +            stu.mySQLEscape(pPhoneFax)                   + "', ";
+                sQL = sQL + "extensionfax = '" +        stu.mySQLEscape(pExtensionFax)               + "', ";
+
+                sQL = sQL + "countrycodemobile = '" +   stu.mySQLEscape(pCountryCodeMobile)          + "', ";
+                sQL = sQL + "areacodemobile = '" +      stu.mySQLEscape(pAreaCodeMobile)             + "', ";
+                sQL = sQL + "phonemobile = '" +         stu.mySQLEscape(pPhoneMobile)                + "', ";
+                sQL = sQL + "extensionmobile = '" +     stu.mySQLEscape(pExtensionMobile)            + "', ";
+
+                sQL = sQL + "roletype = '" +            stu.mySQLEscape(pRoleType)                   + "', ";
+                sQL = sQL + "userjuid = '" +            stu.mySQLEscape(pUserJuid)                   + "', ";
+                sQL = sQL + "sstatus = '" +             stu.mySQLEscape(pStatus)                     + "', ";
+
+                sQL = sQL + "pid = '" +                 stu.mySQLEscape(pPid)                        + "' ";
+                sQL = sQL + "where juid = '" +          stu.mySQLEscape(pJuid)                       + "' ;";
+                
+                enq.execNonQuery( sQL );
                 
             } catch (Exception e) {
             
@@ -550,30 +604,11 @@ public class systemUserFunc extends com.wavemaker.runtime.javaservice.JavaServic
             
             }    
            
-        }               
+        }         
           
         return retVal;                                          
     }                                      
 
-    public Tblperson updatePerson(Tblperson tblperson){
-        
-        String com_db_data_table    = "com.dbwaveerp.data.Tblperson";
-        String table_db             = "dbwaveerp";
-        
-        Tblperson updatedPerson = null;
-        log(INFO, "Updating Tblperson: " );
-        try{
-
-            //Use zero for index when calling update from java service
-            TypedServiceReturn tsrPerson = runtimeSvc.update(table_db, com_db_data_table,tblperson,0);
-            updatedPerson = (Tblperson)tsrPerson.getReturnValue();
-            
-        } catch(Exception e) {
-            log(ERROR, "There was a problem updating person");
-            e.printStackTrace();
-        }
-        return updatedPerson;
-    }
 
     public String createEmployeeExt( 
                                     String pJuid,

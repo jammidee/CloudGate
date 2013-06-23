@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="svcJSONLibrary.spring.xml" type="JavaService" CRUDService="false" class="com.waveerp.jsonLibrary" id="svcJSONLibrary">
+    <operation name="getDriver">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="generateTree">
+        <parameter isList="false" typeRef="java.lang.String" name="strParent"/>
+        <parameter isList="false" typeRef="java.lang.String" name="strDesc"/>
+        <parameter isList="false" typeRef="java.lang.String" name="strIcon"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="setColCount">
+        <parameter isList="false" typeRef="int" name="i"/>
+    </operation>
+    <operation name="setDriver">
+        <parameter isList="false" typeRef="java.lang.String" name="string"/>
+    </operation>
+    <operation name="checkChild">
+        <parameter isList="false" typeRef="java.lang.String" name="strParent"/>
+        <return isList="false" typeRef="int"/>
+    </operation>
+    <operation name="setQuerystring">
+        <parameter isList="false" typeRef="java.lang.String" name="string"/>
+    </operation>
+    <operation name="getColCount">
+        <return isList="false" typeRef="int"/>
+    </operation>
+    <operation name="loadDataEntries">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="loadData">
+        <parameter isList="false" typeRef="java.lang.String" name="treeType"/>
+        <parameter isList="false" typeRef="java.lang.String" name="sqlScript"/>
+        <parameter isList="false" typeRef="java.lang.String" name="strParent"/>
+        <parameter isList="false" typeRef="java.lang.String" name="strDesc"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <dataobjects/>
+</service>

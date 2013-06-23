@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="svcDbDirect.spring.xml" type="JavaService" CRUDService="false" class="com.waveerp.systemDBDirect" id="svcDbDirect">
+    <operation name="getDriver">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="testDatabase">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="setColCount">
+        <parameter isList="false" typeRef="int" name="i"/>
+    </operation>
+    <operation name="getUser">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="setTablename">
+        <parameter isList="false" typeRef="java.lang.String" name="string"/>
+    </operation>
+    <operation name="setQuerystring">
+        <parameter isList="false" typeRef="java.lang.String" name="string"/>
+    </operation>
+    <operation name="getPassword">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="loadTableEntries">
+        <return isList="true"/>
+    </operation>
+    <operation name="loadTableToSession">
+        <parameter isList="false" typeRef="java.lang.String" name="sesVar"/>
+        <parameter isList="false" typeRef="java.lang.String" name="sqlScript"/>
+    </operation>
+    <operation name="setDriver">
+        <parameter isList="false" typeRef="java.lang.String" name="string"/>
+    </operation>
+    <operation name="unloadTableFromSession">
+        <parameter isList="false" typeRef="java.lang.String" name="sesVar"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="setUser">
+        <parameter isList="false" typeRef="java.lang.String" name="string"/>
+    </operation>
+    <operation name="getColCount">
+        <return isList="false" typeRef="int"/>
+    </operation>
+    <operation name="getTablename">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="getQuerystring">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="setPassword">
+        <parameter isList="false" typeRef="java.lang.String" name="string"/>
+    </operation>
+    <dataobjects/>
+</service>

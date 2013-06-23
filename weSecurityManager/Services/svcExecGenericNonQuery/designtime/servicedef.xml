@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="svcExecGenericNonQuery.spring.xml" type="JavaService" CRUDService="false" class="com.waveerp.execGenericNonQuery" id="svcExecGenericNonQuery">
+    <operation name="execNonQueryLong">
+        <parameter isList="false" typeRef="java.lang.String" name="sQuery"/>
+        <return isList="false" typeRef="boolean"/>
+    </operation>
+    <operation name="execNonQuery">
+        <parameter isList="false" typeRef="java.lang.String" name="eQuery"/>
+        <return isList="false" typeRef="boolean"/>
+    </operation>
+    <dataobjects/>
+</service>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="svcDESEncryption.spring.xml" type="JavaService" CRUDService="false" class="com.waveerp.desEncryption" id="svcDESEncryption">
+    <operation name="decrypt">
+        <parameter isList="false" typeRef="java.lang.String" name="value"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="encrypt">
+        <parameter isList="false" typeRef="java.lang.String" name="value"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="Encrypter">
+        <parameter isList="false" typeRef="java.lang.String" name="keyString"/>
+        <parameter isList="false" typeRef="java.lang.String" name="ivString"/>
+    </operation>
+    <dataobjects/>
+</service>

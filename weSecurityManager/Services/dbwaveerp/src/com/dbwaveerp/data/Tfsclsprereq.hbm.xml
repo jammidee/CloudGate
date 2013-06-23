@@ -1,0 +1,18 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbwaveerp.data.Tfsclsprereq" table="tfsclsprereq" catalog="dbwaveerp" dynamic-insert="false" dynamic-update="false">
+        <id name="seqid" type="integer">
+            <column name="seqid"/>
+            <generator class="identity"/>
+        </id>
+        <property name="entityid" type="string">
+            <column name="entityid" length="20"/>
+        </property>
+        <property name="classid" type="string">
+            <column name="classid" length="20"/>
+        </property>
+        <property name="prereqid" type="string">
+            <column name="prereqid" length="20"/>
+        </property>
+    </class>
+</hibernate-mapping>

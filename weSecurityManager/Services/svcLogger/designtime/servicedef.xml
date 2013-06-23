@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="svcLogger.spring.xml" type="JavaService" CRUDService="false" class="com.waveerp.systemLgger" id="svcLogger">
+    <operation name="erpLog2">
+        <parameter isList="false" typeRef="java.lang.String" name="pLevel"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pMessage"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="erpLog3">
+        <parameter isList="false" typeRef="java.lang.String" name="pFile"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pLevel"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pMessage"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="erpLogFileRelativePath">
+        <parameter isList="false" typeRef="java.lang.String" name="pFile"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="erpLog">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <dataobjects/>
+</service>

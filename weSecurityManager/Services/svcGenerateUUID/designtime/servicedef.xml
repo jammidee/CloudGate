@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="svcGenerateUUID.spring.xml" type="JavaService" CRUDService="false" class="com.waveerp.systemGenUUID" id="svcGenerateUUID">
+    <operation name="generateSecureRandomID">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="generateUUID">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <dataobjects/>
+</service>

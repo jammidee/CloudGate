@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="svcJSONLibrary02.spring.xml" type="JavaService" CRUDService="false" class="com.waveerp.jsonLibrary02" id="svcJSONLibrary02">
+    <operation name="getDriver">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="generateTree">
+        <parameter isList="false" typeRef="java.lang.String" name="strParent"/>
+        <parameter isList="false" typeRef="java.lang.String" name="strDesc"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="setColCount">
+        <parameter isList="false" typeRef="int" name="i"/>
+    </operation>
+    <operation name="setDriver">
+        <parameter isList="false" typeRef="java.lang.String" name="string"/>
+    </operation>
+    <operation name="checkChild">
+        <parameter isList="false" typeRef="java.lang.String" name="strParent"/>
+        <return isList="false" typeRef="int"/>
+    </operation>
+    <operation name="setQuerystring">
+        <parameter isList="false" typeRef="java.lang.String" name="string"/>
+    </operation>
+    <operation name="getColCount">
+        <return isList="false" typeRef="int"/>
+    </operation>
+    <operation name="loadDataEntries">
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="loadData">
+        <parameter isList="false" typeRef="java.lang.String" name="sesVar"/>
+        <parameter isList="false" typeRef="java.lang.String" name="sqlScript"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <dataobjects/>
+</service>

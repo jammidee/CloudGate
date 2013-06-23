@@ -1,0 +1,2522 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="dbwaveerp" class="com.dbwaveerp.Dbwaveerp" CRUDService="true" type="DataService" springFile="dbwaveerp.spring.xml">
+    <operation operationType="hqlquery" name="qryUserView01">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tbluser" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryEntityAsgnView">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblentityasgn" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryEmployeeExtUpdate">
+        <parameter name="pParent" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pBadgeId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pDivisionId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pDivisionDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pDepartmentId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pDepartmentDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pSectionId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pSectionDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pLocationId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pLocationDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pRestdayId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pRestdayDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pShiftId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pShiftDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pManagerId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pManagerDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pDeviceIn" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pDeviceOut" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pStatus" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.Integer" isList="false"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryEmployeeExt">
+        <parameter name="pParent" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblemployeeext" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryUserProfileView">
+        <parameter name="pUserId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tbluser" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryRightAsgnView">
+        <parameter name="pRightId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pRoleId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pStatus" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAppId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblrightasgn" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryUserView01Delete">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pUserId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.Integer" isList="false"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryBrowserList">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblbrowserlist" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryLogList">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pStart" typeRef="java.sql.Timestamp" isList="false"/>
+        <parameter name="pEnd" typeRef="java.sql.Timestamp" isList="false"/>
+        <parameter name="pAppId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tbllog" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryGetUserRights">
+        <parameter name="pRoleId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.output.QryGetUserRightsRtnType" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryEntity">
+        <return typeRef="com.dbwaveerp.data.Tblentity" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryEntitySelect">
+        <return typeRef="com.dbwaveerp.data.Tblentity" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryUserView">
+        <parameter name="pUserId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEntityId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pStatus" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pUsername" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEmail" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tbluser" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryPersonView">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPartyId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblperson" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryEmployeeExtDelete">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPartyId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.Integer" isList="false"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryTblOrgDivisionView">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblorgdivision" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryTblOrgDepartmentView">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblorgdepartment" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="updEntityAsgnView">
+        <parameter name="pStatus" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pJuid" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.Integer" isList="false"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryTblOrgRestdayView">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblorgrestday" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="getEntityID">
+        <return typeRef="com.dbwaveerp.data.output.GetEntityIDRtnType" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryPartyDelete">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPartyId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.Integer" isList="false"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryRightView">
+        <parameter name="pRightId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblrights" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryUserProfileUpdate">
+        <parameter name="pFirstname" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pMiddlename" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pLastname" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pUserId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.Integer" isList="false"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryPartyView01">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblperson" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryLogDelete">
+        <parameter name="pJuid" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.Integer" isList="false"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryAppList">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblapplist" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="updAppList">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAppId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pStatus" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.Integer" isList="false"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryTblOrgLocationView">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblorglocation" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryTblUser">
+        <parameter name="pUserId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tbluser" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryTblOrgSectionView">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblorgsection" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryRegList">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblregistry" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryRoleAsgnView">
+        <parameter name="pUserId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEntityId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pStatus" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblroleasgn" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="updUserView01">
+        <parameter name="pStatus" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pUserId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.Integer" isList="false"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryPartyView">
+        <parameter name="pStatus" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEntityId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEmail" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPartyId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pFirstName" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pMiddleName" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pLastName" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblperson" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryEntityDelete">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.Integer" isList="false"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryRoleView">
+        <parameter name="pRoleId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEntityId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pStatus" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblrole" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryLogDeletePrior">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAppId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pStart" typeRef="java.sql.Timestamp" isList="false"/>
+        <return typeRef="java.lang.Integer" isList="false"/>
+    </operation>
+    <operation operationType="hqlquery" name="qRoleView">
+        <return typeRef="com.dbwaveerp.data.Tbltypereq" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryUrlAccess">
+        <return typeRef="com.dbwaveerp.data.Tblaccessurl" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryUserTree">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pUserId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tbluser" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qrySessionView">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblsessions" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="updConnProfileView">
+        <parameter name="pStatus" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pJuid" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.Integer" isList="false"/>
+    </operation>
+    <operation operationType="hqlquery" name="getTblorglocationById">
+        <parameter name="id" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblorglocation" isList="false"/>
+    </operation>
+    <operation operationType="hqlquery" name="getUserByEmail">
+        <parameter name="email" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tbluser" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryTblOrgShiftView">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblorgshift" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryPersonViewUpdate">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pJuid" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pUserjuid" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pTitle" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pFirstName" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pMiddleName" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pLastName" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pSuffix" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAddr01" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAddr02" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEmpState" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pZipCode" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCountry" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEmail" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCountryCodeHome" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAreaCodeHome" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPhoneHome" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pExtensionHome" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCountryCodeWork" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAreaCodeWork" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPhoneWork" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pExtensionWork" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCountryCodeFax" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAreaCodeFax" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPhoneFax" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pExtensionFax" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCountryCodeMobile" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAreaCodeMobile" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPhoneMobile" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pExtensionMobile" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPid" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.Integer" isList="false"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryMediaLib">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAppId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.output.QryMediaLibRtnType" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryConnProfileView">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblconnprofile" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryADMappingView">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tbladmapping" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryEntityView">
+        <return typeRef="com.dbwaveerp.data.output.QryEntityViewRtnType" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryRightsView">
+        <parameter name="pRightId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEntityId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pStatus" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAppId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="com.dbwaveerp.data.Tblrights" isList="true"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryEntityAsgnDelete">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pJuId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.Integer" isList="false"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryConnProfileDelete">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pJuId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.Integer" isList="false"/>
+    </operation>
+    <operation operationType="hqlquery" name="qryBrowserListDelete">
+        <parameter name="pJuid" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.Integer" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="com.dbwaveerp.data.Tblaccessurl" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="urlid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="urlpassword" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tbladmapping" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="urlid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userpass" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="aduserid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblapplist" supportsQuickData="true">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+                <exclude>insert</exclude>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="appid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="appdesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="status" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblapps" supportsQuickData="true">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+                <exclude>insert</exclude>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="appid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblattachment" supportsQuickData="true">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+                <exclude>insert</exclude>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="ticketid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="filedata" typeRef="byte" isList="true" allowNull="true"/>
+            <element name="filename" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="filext" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblbrowserlist" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="browseid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblcalendar" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="caldate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="groupid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="subject" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="priority" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblchargecode" supportsQuickData="true">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+                <exclude>insert</exclude>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="chargecodeid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="solnid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="solndesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="compid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="compdesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblcomp" supportsQuickData="true">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+                <exclude>insert</exclude>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="compid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="solnid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="solndesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="chargecodeid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="chargecodedesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblconnprofile" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="connid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="dbengine" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dburl" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dbdriver" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dbusername" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dbpassword" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tbldatastaging01" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="uhandle" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell01" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell02" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell03" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell04" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell05" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell06" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell07" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell08" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell09" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell10" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell11" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell12" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell13" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell14" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell15" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell16" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell17" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell18" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell19" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="cell20" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblemployeeext" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="parentPerson" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="badgeid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="divisionid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="divisiondesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="departmentid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="departmentdesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sectionid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sectiondesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="locationid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="locationdesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="restdayid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="restdaydesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="shiftid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="shiftdesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="managerid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="managerdesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="devicein" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deviceout" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblentity" supportsQuickData="true">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+                <exclude>insert</exclude>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="company" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="addr01" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="addr02" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="addr03" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblentityasgn" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="username" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tbllog" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="logdatetime" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="msg" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="moduleid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="proccess" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="serverid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="appid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="scopeid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="stype" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="entity" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tbllogging" supportsQuickData="true">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+                <exclude>insert</exclude>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="serverid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="appid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="loglevel" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="logdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblmedialib" supportsQuickData="true">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+                <exclude>insert</exclude>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="entity" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="appid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="filedata" typeRef="byte" isList="true" allowNull="true"/>
+            <element name="filename" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="filext" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="filesize" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="filedate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="filesrc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="ispicture" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="ispdf" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="hasviewer" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="isreport" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="reporttitle" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="reportpara" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="reportgrp" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="connprofile" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="reportparent" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="geodesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="geolon" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="geolat" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblmodule" supportsQuickData="true">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+                <exclude>insert</exclude>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="moduleid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblorgdepartment" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="orgid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="itmgrid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="itmgrname" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="contact01" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="contact02" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="location" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblorgdivision" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="orgid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="contact01" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="contact02" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblorglocation" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="orgid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="contact01" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="contact02" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="geodesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="geolon" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="geolat" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="category" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblorgrestday" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="orgid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dsun" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dmon" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dtues" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dwed" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dthu" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dfri" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dsat" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblorgsection" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="orgid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="contact01" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="contact02" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblorgshift" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="orgid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="timefrom" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="timeto" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="breaktime" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="breakstart" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="breakend" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="swipepolicy" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="axing" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="flexAllow" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="flexIn" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="flexOut" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="otAllow" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="otMinimum" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="otStart" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="otEnd01" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="otEnd02" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="otEnd03" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="diffAllow" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="diffStart" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="diffEnd01" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="diffEnd02" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="diffEnd03" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblperson" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="partyid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="title" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="firstname" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="middlename" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lastname" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="suffix" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="addr01" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="addr02" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="city" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="empstate" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="zipcode" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="country" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="email" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="countrycodehome" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="areacodehome" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="phonehome" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="extensionhome" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="countrycodework" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="areacodework" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="phonework" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="extensionwork" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="countrycodefax" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="areacodefax" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="phonefax" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="extensionfax" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="countrycodemobile" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="areacodemobile" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="phonemobile" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="extensionmobile" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="roletype" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userjuid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblregistry" supportsQuickData="true">
+            <element name="id" typeRef="com.dbwaveerp.data.TblregistryId" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entity" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="appid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="regdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="varname" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="varvalue" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblreportasgn" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="reportgrpid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="username" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblreportgroup" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="reportgrpid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblrightasgn" supportsQuickData="true">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+                <exclude>insert</exclude>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="rightid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="roleid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="appid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblrights" supportsQuickData="true">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+                <exclude>insert</exclude>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="rightid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="appid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblrole" supportsQuickData="true">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+                <exclude>insert</exclude>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="roleid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="shortdesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblroleasgn" supportsQuickData="true">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+                <exclude>insert</exclude>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="roleid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="isdefault" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblsessions" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="appid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="serverid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="timecreate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="timemodify" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="timetolive" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="timeleft" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="username" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblseverity" supportsQuickData="true">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+                <exclude>insert</exclude>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="severityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="ticketid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="bizhours" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="bizdays" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblsoln" supportsQuickData="true">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+                <exclude>insert</exclude>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="solnid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="chargecodeid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblstatus" supportsQuickData="true">
+            <element name="id" typeRef="com.dbwaveerp.data.TblstatusId" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="statusid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="statusorder" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="nextorder" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="email" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="modeid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="clockon" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="userid01" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="email01" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userid02" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="email02" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userid03" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="email03" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userid04" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="email04" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userid05" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="email05" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="possibleorder" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tbltempattachment" supportsQuickData="true">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+                <exclude>insert</exclude>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="ticketid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="filename" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="filext" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tbltickets" supportsQuickData="true">
+            <element name="id" typeRef="com.dbwaveerp.data.TblticketsId" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="entitydesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="version" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="iscurrent" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="ticketid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="title" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="reqtypeid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="reqtypedesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="solnid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="solndesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="compcodeid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="compcodedesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="chargecodeid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="chargecodedesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="severityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="severitydesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="assignedto" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="assignedtodesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="createdby" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="createdbydesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="requestor" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="requestordesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="actualdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="requireddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="ticketdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="fbackdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="tcomment" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="autoclose" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="statusid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="statusdesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="statusorder" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="ticketimg" typeRef="byte" isList="true" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="resolution" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tbltkstrack" supportsQuickData="true">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+                <exclude>insert</exclude>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="ticketid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="logdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="statusid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="clock" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tbltypereq" supportsQuickData="true">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+                <exclude>insert</exclude>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="reqtypeid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tbluser" supportsQuickData="true">
+            <element name="id" typeRef="com.dbwaveerp.data.TbluserId" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="password" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="passwdenc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="username" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="firstname" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="middlename" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="lastname" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="email" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="roleid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="userimg" typeRef="byte" isList="true" allowNull="true"/>
+            <element name="userimgext" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="parentPerson" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Vueemployeeusers" supportsQuickData="true">
+            <element name="id" typeRef="com.dbwaveerp.data.VueemployeeusersId" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmcategories" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="appid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="siteid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="catid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmcomments" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="username" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="doccomment" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmdocasgn" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="siteid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="docid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="docname" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="ownerid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="owneremail" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="username" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="useremail" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="docprompt" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="doccomment" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="docstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="docstage" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="docnextstage" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="possibleorder" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="doclogicop" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="canreasgn" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="ifstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="ifaction" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="tostatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="tostage" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="flowscript" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmdocasgnheader" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="workid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmdocuclass" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="siteid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmdocuments" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="siteid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="title" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="moretext" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="createdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="lastmodified" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="dateexpire" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="publisher" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="publishername" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="doctype" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="doctypeid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="docrating" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="numhits" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="filext" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="docclass" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dockeywords" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="relateid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="revisionid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="revisionno" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="slideid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="slideno" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="docstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="docstage" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="doclastchg" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="wflow" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="geodesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="geolon" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="geolat" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmdocutype" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="siteid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmentityasgn" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="siteid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="username" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="asgntype" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="asgnoverride" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmfiles" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entity" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="appid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="filegrp" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="filecat" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="filedata" typeRef="byte" isList="true" allowNull="true"/>
+            <element name="filename" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="filext" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="filesize" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="filedate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="filesrc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="ispicture" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="ispdf" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="hasviewer" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmfolders" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="appid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="siteid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="folderid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="foldername" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="folderdesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="email" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmformdata" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="appid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="formid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="itemid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="badgeid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="locid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="divid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deptid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sectid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userposition" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userclass" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="fname" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="mname" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lname" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="int01" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="int02" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="int03" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="int04" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="int05" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="int06" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="int07" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="int08" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="int09" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="int10" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="dbl01" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="dbl02" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="dbl03" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="dbl04" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="dbl05" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="dbl06" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="dbl07" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="dbl08" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="dbl09" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="dbl10" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="lng01" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lng02" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lng03" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lng04" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lng05" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lng06" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lng07" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lng08" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lng09" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lng10" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dat01" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="dat02" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="dat03" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="dat04" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="dat05" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="dat06" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="dat07" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="dat08" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="dat09" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="dat10" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="tim01" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="tim02" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="tim03" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="tim04" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="tim05" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="tim06" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="tim07" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="tim08" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="tim09" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="tim10" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="str01" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="str02" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="str03" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="str04" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="str05" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="str06" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="str07" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="str08" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="str09" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="str10" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="str11" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="str12" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="str13" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="str14" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="str15" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="str16" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="str17" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="str18" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="str19" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="str20" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="txt01" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="txt02" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="txt03" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="txt04" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="txt05" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="txt06" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="txt07" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="txt08" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="txt09" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="txt10" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="createby" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="createdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmforms" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="siteid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="appid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="title" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="textdata" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="templatefile" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmformtemplates" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="tempid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="template" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="templatefile" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmfrmlookup" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="appid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="keyid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="catid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmgroupsite" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="siteid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmnotes" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="siteid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="title" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="textdata" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmreportprofile" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="siteid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="title" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="textdata" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dbengine" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dburl" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dbdriver" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dbusername" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dbpassword" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="gtype" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="graphquery" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="grlegend" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="grlabel" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmsiteasgn" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="siteid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="username" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="asgntype" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="asgnoverride" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmslides" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="appid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="siteid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="slideid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmworkflow" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="workid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wdmworkflowdetails" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="siteid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="docid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="docname" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="ownerid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="username" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="useremail" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="docprompt" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="doccomment" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="docstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="docstage" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="docnextstage" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="possibleorder" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="doclogicop" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="canreasgn" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="ifstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="ifaction" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="tostatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="tostage" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="flowscript" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wlmloadbalscheme" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="seqno" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="serverid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="servername" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="appid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="portno" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="curseq" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="nextseq" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wlmserverlist" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="farmid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="serverid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="servername" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="conusers" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="strictlimit" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wsmclass" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="classid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="classdesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="notes" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="trnid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="roomid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="slots" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="schoolyear" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="classfee" typeRef="java.lang.Float" isList="false" allowNull="true"/>
+            <element name="instid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="datecreated" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wsmroom" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="roomid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="roomdesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="roomno" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="notes" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wsmschoolyear" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="schid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="schdesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wsmtraining" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="trnid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="trndesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="nodays" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="notes" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wtmbadgeoverrides" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="badge" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="mapuserid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wtmbundylist" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="deviceid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="useinout" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="locid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wtmleavetype" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="itmid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="pid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="itmgrid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="itmgrname" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="contact01" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="contact02" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="location" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wtmperiod" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="periodid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wtmprojactivities" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="projectid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="projactid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="acttype" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="rateoutput" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="ratehour" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="budhours" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="chargecode" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="location" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="supervisor" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wtmproject" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="projectid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="budhours" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wtmprojlocation" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="locationid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wtmtestbundydata" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="deviceid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="badge" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="attdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="atttime" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="attdatetime" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="atttype" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wtmtimedatalocation" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="empid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="fname" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="mname" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lname" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="locdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="loctime" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="locdept" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="geolon" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="geolat" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wtmtimedatalocationsum" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="locdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="loctime" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="locdept" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="geolon" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="geolat" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="incnt" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="outcnt" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wtmtimedatapair" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="deviceid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="badge" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="swipepol" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="attdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="ain01" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="aout01" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="ain02" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="aout02" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="ain03" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="aout03" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="ain04" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="aout04" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="ain05" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="aout05" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="ispaired" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="entity" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="siteid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="empid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="fname" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="mname" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lname" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="shiftcode" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="shstarttime" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="shendtime" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="shbreaktime" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="shswipestat" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="shebird" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="shtard" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="shutime" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="shotime" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="axing" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="diffstart" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="difftm01" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="difftm02" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="difftm03" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="diffhr01" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="diffhr02" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="diffhr03" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="otstart" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="ottm01" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="ottm02" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="ottm03" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="othr01" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="othr02" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="othr03" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="hrswrk" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="restcode" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dayofweek" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="daytype" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="attdatetime" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="loaddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="loadtime" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="loadby" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wtmtimedataraw" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="deviceid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="badge" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="attdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="atttime" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="attdatetime" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="atttype" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="loaddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="loadtime" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="loadby" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="axing" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="datasrc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="datastat" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="useinout" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="maplocid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="mapentity" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="mapsiteid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="mapuserid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="mapempid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="mapfname" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="mapmname" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="maplname" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="mapdiv" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="mapdept" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="mapsect" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="mapgeolon" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="mapgeolat" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="devicein" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deviceout" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Wtmtimereporttrans" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="projectid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="transdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="projactid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="acttype" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="rateoutput" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="ratehour" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="nooutput" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="nohours" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="daywage" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="chargecode" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="location" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="supervisor" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="transcomment" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="periodid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.ZdtTimeEntries" supportsQuickData="true">
+            <element name="id" typeRef="com.dbwaveerp.data.ZdtTimeEntriesId" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="zterid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.TblregistryId" name="id" supportsQuickData="false">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.ZdtTimeEntriesId" name="id" supportsQuickData="false">
+            <element name="zbukrs" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="ztrtyp" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="zpernr" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="zldate" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="zltime" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="zsatza" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.VueemployeeusersId" name="id" supportsQuickData="false">
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="partyid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="badgeid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="email" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="divisionid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="departmentid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="sectionid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="locationid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="restdayid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="shiftid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="managerid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.TblstatusId" name="id" supportsQuickData="false">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.TbluserId" name="id" supportsQuickData="false">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.TblticketsId" name="id" supportsQuickData="false">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.output.GetEntityIDRtnType" supportsQuickData="false">
+            <element name="c0" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.output.QryMediaLibRtnType" supportsQuickData="false">
+            <element name="c0" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="c1" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="c2" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="c3" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="c4" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="c5" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="c6" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="c7" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="c8" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="c9" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="c10" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.output.QryEntityViewRtnType" supportsQuickData="false">
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="company" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.output.QryGetUserRightsRtnType" supportsQuickData="false">
+            <element name="rightid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

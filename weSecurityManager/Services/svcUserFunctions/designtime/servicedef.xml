@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="svcUserFunctions" class="com.waveerp.systemUserFunc" CRUDService="false" type="JavaService" springFile="svcUserFunctions.spring.xml">
+    <operation name="copyRoleRights">
+        <parameter name="pSrcRole" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pDstRole" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEntityId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="createEmployeeExt">
+        <parameter name="pJuid" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEntityId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pParent" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pBadgeId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pDivisionId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pDivisionDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pDepartmentId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pDepartmentDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pSectionId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pSectionDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pLocationId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pLocationDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pRestDayId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pRestDayDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pShiftId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pShiftDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pManagerId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pManagerDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pDeviceIn" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pDeviceOut" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pStatus" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="createParty">
+        <parameter name="pEntityId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPartyId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pTitle" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pFirstName" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pMiddleName" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pLastName" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pSuffix" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAddr01" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAddr02" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEmpState" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pZipCode" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCountry" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEmail" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCountryCodeHome" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAreaCodeHome" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPhoneHome" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pExtensionHome" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCountryCodeWork" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAreaCodeWork" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPhoneWork" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pExtensionWork" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCountryCodeMobile" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAreaCodeMobile" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPhoneMobile" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pExtensionMobile" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCountryCodeFax" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAreaCodeFax" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPhoneFax" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pExtensionFax" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pRoleType" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pUserJuid" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pStatus" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPid" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="createUser">
+        <parameter name="pJuid" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEntityId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pUserId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPassword" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pUsername" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pFirstname" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pMiddlename" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pLastname" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pStatus" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEmail" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pRoleId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pStartDate" typeRef="java.util.Date" isList="false"/>
+        <parameter name="pEndDate" typeRef="java.util.Date" isList="false"/>
+        <parameter name="pPid" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="deleteRoleRights">
+        <parameter name="pSrcRole" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEntityId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="updateParty">
+        <parameter name="pJuid" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEntityId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPartyId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pTitle" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pFirstName" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pMiddleName" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pLastName" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pSuffix" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAddr01" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAddr02" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEmpState" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pZipCode" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCountry" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEmail" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCountryCodeHome" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAreaCodeHome" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPhoneHome" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pExtensionHome" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCountryCodeWork" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAreaCodeWork" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPhoneWork" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pExtensionWork" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCountryCodeMobile" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAreaCodeMobile" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPhoneMobile" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pExtensionMobile" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCountryCodeFax" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAreaCodeFax" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPhoneFax" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pExtensionFax" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pRoleType" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pUserJuid" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pStatus" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pPid" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <dataobjects/>
+</service>

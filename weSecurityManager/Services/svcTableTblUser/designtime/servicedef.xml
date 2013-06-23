@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="svcTableTblUser" class="com.waveerp.TableTblUser" CRUDService="false" type="JavaService" springFile="svcTableTblUser.spring.xml">
+    <operation name="decryptUserPasswordAll">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="encryptUserPasswordAll">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="findEmail">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEmail" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="getTableValue">
+        <parameter name="pUserId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pField" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="getTableValueByEmail">
+        <parameter name="pEmail" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pField" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="updateUserPassword">
+        <parameter name="pUserId" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pOldPassword" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pNewPassword" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <dataobjects/>
+</service>

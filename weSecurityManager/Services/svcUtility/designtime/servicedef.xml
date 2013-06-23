@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="svcUtility" class="com.waveerp.Utility" CRUDService="false" type="JavaService" springFile="svcUtility.spring.xml">
+    <operation name="encryptMD5">
+        <parameter name="code" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="getAllocatedVsAvailableMemory">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="getAvailableVsFreeVsUsedMemory">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="getFreeVsUsedMemory">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="getSystemFreeMemory">
+        <return typeRef="long" isList="false"/>
+    </operation>
+    <operation name="getSystemMaximumMemory">
+        <return typeRef="long" isList="false"/>
+    </operation>
+    <operation name="getSystemOSName">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="getSystemTotalMemory">
+        <return typeRef="long" isList="false"/>
+    </operation>
+    <operation name="retEmail">
+        <parameter name="inEmail" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.Boolean" isList="false"/>
+    </operation>
+    <operation name="systemInfoToHtml">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="toHexadecimal">
+        <parameter name="datos" typeRef="byte" isList="true"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="validateEmail">
+        <parameter name="inEmail" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="boolean" isList="false"/>
+    </operation>
+    <dataobjects/>
+</service>

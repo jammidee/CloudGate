@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="svcLogging.spring.xml" type="JavaService" CRUDService="false" class="com.waveerp.loggingSystem" id="svcLogging">
+    <operation name="execNonQuery">
+        <parameter isList="false" typeRef="java.lang.String" name="eQuery"/>
+        <return isList="false" typeRef="boolean"/>
+    </operation>
+    <operation name="writeAppLog">
+        <parameter isList="false" typeRef="java.lang.String" name="pUserId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pMsg"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pModuleId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pAppId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pProcess"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pScopeId"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pStype"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pEntity"/>
+        <return isList="false" typeRef="boolean"/>
+    </operation>
+    <dataobjects/>
+</service>

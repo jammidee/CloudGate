@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="svcLicenseSystem" class="com.waveerp.systemLicense" CRUDService="false" type="JavaService" springFile="svcLicenseSystem.spring.xml">
+    <operation name="checkEntityLicense">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="checkUserLicense">
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="compareKey">
+        <parameter name="pKeySource" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="generateKey">
+        <parameter name="pKey" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pKeySource" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="generateKeyNoKey">
+        <parameter name="pKeySource" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="generateURLKey">
+        <parameter name="pKey" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pKeySource" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="makeLicenseKey">
+        <parameter name="pKey" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pKeySource" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="readURLKey">
+        <parameter name="pKey" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pKeySource" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="unGenerateKey">
+        <parameter name="pRegSource" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <operation name="writeToFileKey">
+        <parameter name="pLicTo" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pConUsers" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pNoUsers" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pNoEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pEdition" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="java.lang.String" isList="false"/>
+    </operation>
+    <dataobjects/>
+</service>

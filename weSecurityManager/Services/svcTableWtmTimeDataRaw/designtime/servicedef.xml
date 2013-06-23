@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="svcTableWtmTimeDataRaw.spring.xml" type="JavaService" CRUDService="false" class="com.waveerp.TableWtmTimeDataRaw" id="svcTableWtmTimeDataRaw">
+    <operation name="getTableValue">
+        <parameter isList="false" typeRef="java.lang.String" name="pJuid"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pField"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <operation name="changeDataStatus">
+        <parameter isList="false" typeRef="java.lang.String" name="pJuid"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pField"/>
+        <parameter isList="false" typeRef="java.lang.String" name="pData"/>
+        <return isList="false" typeRef="java.lang.String"/>
+    </operation>
+    <dataobjects/>
+</service>
