@@ -1,0 +1,16 @@
+{
+	"methods": [{
+		"name": "genRights",
+		"operationType": null,
+		"parameters": [{
+			"name": "pGenerate",
+			"type": "java.lang.String"
+		}, {
+			"name": "pEntityId",
+			"type": "java.lang.String"
+		}],
+		"returnType": "boolean"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "svcGenerateRights.json"
+}

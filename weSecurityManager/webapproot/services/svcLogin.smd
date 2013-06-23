@@ -1,0 +1,35 @@
+{
+	"methods": [{
+		"name": "authenticate",
+		"operationType": null,
+		"parameters": [{
+			"name": "pUserId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pPass",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}, {
+		"name": "getUserInfo",
+		"operationType": null,
+		"parameters": [{
+			"name": "pUserId",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}, {
+		"name": "getUserValue",
+		"operationType": null,
+		"parameters": [{
+			"name": "pUserId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pField",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "svcLogin.json"
+}

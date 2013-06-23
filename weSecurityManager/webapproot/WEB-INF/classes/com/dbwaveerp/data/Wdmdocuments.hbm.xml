@@ -1,0 +1,108 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbwaveerp.data.Wdmdocuments" table="wdmdocuments" dynamic-insert="false" dynamic-update="false">
+        <id name="juid" type="string">
+            <column name="juid" length="36"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="entityid" type="string">
+            <column name="entityid" length="20"/>
+        </property>
+        <property name="siteid" type="string">
+            <column name="siteid" length="20"/>
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="200" not-null="true"/>
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535"/>
+        </property>
+        <property name="moretext" type="string">
+            <column name="moretext" length="65535"/>
+        </property>
+        <property name="createdate" type="date">
+            <column name="createdate" length="10"/>
+        </property>
+        <property name="lastmodified" type="date">
+            <column name="lastmodified" length="10"/>
+        </property>
+        <property name="dateexpire" type="date">
+            <column name="dateexpire" length="10"/>
+        </property>
+        <property name="sstatus" type="string">
+            <column name="sstatus" length="20" not-null="true"/>
+        </property>
+        <property name="publisher" type="string">
+            <column name="publisher" length="20" not-null="true"/>
+        </property>
+        <property name="publishername" type="string">
+            <column name="publishername" length="50"/>
+        </property>
+        <property name="pid" type="string">
+            <column name="pid" length="36" not-null="true"/>
+        </property>
+        <property name="doctype" type="string">
+            <column name="doctype" length="20" not-null="true"/>
+        </property>
+        <property name="doctypeid" type="string">
+            <column name="doctypeid" length="36" not-null="true"/>
+        </property>
+        <property name="docrating" type="integer">
+            <column name="docrating"/>
+        </property>
+        <property name="numhits" type="integer">
+            <column name="numhits"/>
+        </property>
+        <property name="deleted" type="integer">
+            <column name="deleted"/>
+        </property>
+        <property name="seqid" type="integer">
+            <column name="seqid"/>
+        </property>
+        <property name="filext" type="string">
+            <column name="filext" length="10" not-null="true"/>
+        </property>
+        <property name="docclass" type="string">
+            <column name="docclass" length="50"/>
+        </property>
+        <property name="dockeywords" type="string">
+            <column name="dockeywords" length="200"/>
+        </property>
+        <property name="relateid" type="string">
+            <column name="relateid" length="36" not-null="true"/>
+        </property>
+        <property name="revisionid" type="string">
+            <column name="revisionid" length="36" not-null="true"/>
+        </property>
+        <property name="revisionno" type="integer">
+            <column name="revisionno"/>
+        </property>
+        <property name="slideid" type="string">
+            <column name="slideid" length="20"/>
+        </property>
+        <property name="slideno" type="integer">
+            <column name="slideno"/>
+        </property>
+        <property name="docstatus" type="string">
+            <column name="docstatus" length="20"/>
+        </property>
+        <property name="docstage" type="integer">
+            <column name="docstage"/>
+        </property>
+        <property name="doclastchg" type="date">
+            <column name="doclastchg" length="10"/>
+        </property>
+        <property name="wflow" type="integer">
+            <column name="wflow"/>
+        </property>
+        <property name="geodesc" type="string">
+            <column name="geodesc" length="200"/>
+        </property>
+        <property name="geolon" type="double">
+            <column name="geolon" precision="22"/>
+        </property>
+        <property name="geolat" type="double">
+            <column name="geolat" precision="22"/>
+        </property>
+    </class>
+</hibernate-mapping>

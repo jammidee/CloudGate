@@ -1,0 +1,102 @@
+body.tundra .PgUser .wmlayout .PgUser-pnlHeader {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgUser .wmlayout .PgUser-pnlTitle {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgUser .wmlayout .PgUser-lblTitle {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:14pt;
+}
+
+body.tundra .PgUser .wmlayout .PgUser-pnlMenuBar {
+	background-color:#00008B;
+}
+
+body.tundra .PgUser .wmlayout .PgUser-pnlFooter {
+	background-color:#00008B;
+}
+
+
+body.tundra .PgUser .PgUser-pnlLayoutMain.wmlayout {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+
+
+body.tundra .PgUser .wmlayout .PgUser-pnlInputFields {
+	
+}
+
+body.tundra .PgUser .wmlayout .PgUser-pnlBody {
+	background-color:#FFFFFF;
+	color:#666666;
+border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:10pt;
+font-weight:bold;
+}
+
+body.tundra  .PgUser-txtSearch {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:9pt;
+font-weight:bold;
+}
+
+body.tundra  .PgUser-txtUserStatus {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:9pt;
+font-weight:bold;
+}
+
+body.tundra  .PgUser-txtUname {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:9pt;
+font-weight:bold;
+}
+
+body.tundra  .PgUser-txtEMail {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:9pt;
+font-weight:bold;
+}
+
+body.tundra  .PgUser-txtSearch {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:9pt;
+font-weight:bold;
+}
+

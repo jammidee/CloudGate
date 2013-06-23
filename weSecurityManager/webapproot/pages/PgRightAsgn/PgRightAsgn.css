@@ -1,0 +1,56 @@
+body.tundra .PgRoleAsgn .wmlayout .PgRightAsgn-pnlHeader {
+	background-color:#FFFFFF;
+}
+
+body.tundra .PgRightAsgn .wmlayout .PgRightAsgn-pnlTitle {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgRightAsgn .wmlayout .PgRightAsgn-lblTitle {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:14pt;
+}
+
+body.tundra .PgRightAsgn .wmlayout .PgRightAsgn-pnlMenuBar {
+	background-color:#00008B;
+}
+
+body.tundra .PgRightAsgn .wmlayout .PgRightAsgn-pnlFooter {
+	background-color:#00008B;
+}
+
+
+body.tundra .PgRightAsgn .PgRightAsgn-pnlLayoutMain.wmlayout {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+
+
+body.tundra .PgRightAsgn .wmlayout .PgRightAsgn-pnlInputFields {
+	
+}
+
+body.tundra .PgRightAsgn .wmlayout .PgRightAsgn-pnlBody {
+	background-color:#FFFFFF;
+	color:#666666;
+border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:10pt;
+font-weight:bold;
+}
+
+body.tundra .PgRightAsgn .wmlayout .PgRightAsgn-pnlHeader {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+

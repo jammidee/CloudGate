@@ -1,0 +1,89 @@
+body.tundra .PgMainUser .wmlayout .PgMainUser-pnlHeader {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainUser .wmlayout .PgMainUser-pnlTitle {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainUser .wmlayout .PgMainUser-lblTitle {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:14pt;
+}
+
+body.tundra .PgMainUser .wmlayout .PgMainUser-pnlMenuBar {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainUser .wmlayout .PgMainUser-pnlFooter {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainUser .wmlayout .PgMainUser-txtUserId {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainUser .PgMainUser-pnlLayoutMain.wmlayout {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainUser .wmlayout .PgMainUser-txtPassword {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainUser .wmlayout .PgMainUser-lblUser {
+	font-family: Tahoma;
+}
+
+body.tundra .PgMainUser .wmlayout .PgMainUser-lblUserInfo {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainUser .wmlayout .PgMainUser-lblBorder {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainUser .wmlayout .PgMainUser-lblLogout {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainUser .wmlayout .PgMainUser-lblSep {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainUser .wmlayout .PgMainUser-lblAsgnRole {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainUser .wmlayout .PgMainUser-pnlBody {
+	background-image:url(resources/images/logos/wavebgnd.gif) !important;
+	background-repeat:no-repeat !important;
+}
+
+body.tundra .PgMainUser .wmlayout .PgMainUser-lblHelp {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainUser .wmlayout .PgMainUser-lblBorder2 {
+	font-family:Tahoma;
+}
+

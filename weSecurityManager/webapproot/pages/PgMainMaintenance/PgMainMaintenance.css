@@ -1,0 +1,85 @@
+body.tundra .PgMainMaintenance .wmlayout .PgMainMaintenance-pnlHeader {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainMaintenance .wmlayout .PgMainMaintenance-pnlTitle {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainMaintenance .wmlayout .PgMainMaintenance-lblTitle {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:14pt;
+}
+
+body.tundra .PgMainMaintenance .wmlayout .PgMainMaintenance-pnlMenuBar {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainMaintenance .wmlayout .PgMainMaintenance-pnlFooter {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainMaintenance .wmlayout .PgMainMaintenance-txtUserId {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainMaintenance .PgMainMaintenance-pnlLayoutMain.wmlayout {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainMaintenance .wmlayout .PgMainMaintenance-txtPassword {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainMaintenance .wmlayout .PgMainMaintenance-lblManageTicket {
+	font-family: Tahoma;
+}
+
+body.tundra .PgMainMaintenance .wmlayout .PgMainMaintenance-lblUserInfo {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainMaintenance .wmlayout .PgMainMaintenance-lblBorder {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainMaintenance .wmlayout .PgMainMaintenance-lblLogout {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainMaintenance .wmlayout .PgMainMaintenance-lblSep {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainMaintenance .wmlayout .PgMainMaintenance-lblManageUser {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainMaintenance .wmlayout .PgMainMaintenance-pnlBody {
+	background-image:url(resources/images/logos/wavebgnd.gif) !important;
+	background-repeat:no-repeat !important;
+}
+
+body.tundra .PgMainMaintenance .wmlayout .PgMainMaintenance-lblManageLookUp {
+	font-family:Tahoma;
+}
+

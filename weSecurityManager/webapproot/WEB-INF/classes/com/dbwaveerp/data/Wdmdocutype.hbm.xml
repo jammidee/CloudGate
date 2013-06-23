@@ -1,0 +1,33 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbwaveerp.data.Wdmdocutype" table="wdmdocutype" dynamic-insert="false" dynamic-update="false">
+        <id name="juid" type="string">
+            <column name="juid" length="36"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="entityid" type="string">
+            <column name="entityid" length="20"/>
+        </property>
+        <property name="siteid" type="string">
+            <column name="siteid" length="20"/>
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535"/>
+        </property>
+        <property name="startdate" type="date">
+            <column name="startdate" length="10"/>
+        </property>
+        <property name="enddate" type="date">
+            <column name="enddate" length="10"/>
+        </property>
+        <property name="sstatus" type="string">
+            <column name="sstatus" length="20"/>
+        </property>
+        <property name="pid" type="string">
+            <column name="pid" length="20"/>
+        </property>
+        <property name="deleted" type="integer">
+            <column name="deleted"/>
+        </property>
+    </class>
+</hibernate-mapping>

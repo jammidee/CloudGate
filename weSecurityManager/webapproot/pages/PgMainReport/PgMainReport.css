@@ -1,0 +1,85 @@
+body.tundra .PgMainReport .wmlayout .PgMainReport-pnlHeader {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainReport .wmlayout .PgMainReport-pnlTitle {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainReport .wmlayout .PgMainReport-lblTitle {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:14pt;
+}
+
+body.tundra .PgMainReport .wmlayout .PgMainReport-pnlMenuBar {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainReport .wmlayout .PgMainReport-pnlFooter {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainReport .wmlayout .PgMainReport-txtUserId {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainReport .PgMainReport-pnlLayoutMain.wmlayout {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainReport .wmlayout .PgMainReport-txtPassword {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainReport .wmlayout .PgMainReport-lblManageTicket {
+	font-family: Tahoma;
+}
+
+body.tundra .PgMainReport .wmlayout .PgMainReport-lblUserInfo {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainReport .wmlayout .PgMainReport-lblBorder {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainReport .wmlayout .PgMainReport-lblLogout {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainReport .wmlayout .PgMainReport-lblSep {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainReport .wmlayout .PgMainReport-lblManageUser {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainReport .wmlayout .PgMainReport-pnlBody {
+	background-image:url(resources/images/logos/wavebgnd.gif) !important;
+	background-repeat:no-repeat !important;
+}
+
+body.tundra .PgMainReport .wmlayout .PgMainReport-lblManageLookUp {
+	font-family:Tahoma;
+}
+

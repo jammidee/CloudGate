@@ -1,0 +1,72 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbwaveerp.data.Wtmtimereporttrans" table="wtmtimereporttrans" dynamic-insert="false" dynamic-update="false">
+        <id name="juid" type="string">
+            <column name="juid" length="36"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="entityid" type="string">
+            <column name="entityid" length="20" not-null="true"/>
+        </property>
+        <property name="userid" type="string">
+            <column name="userid" length="20" not-null="true"/>
+        </property>
+        <property name="projectid" type="string">
+            <column name="projectid" length="20" not-null="true"/>
+        </property>
+        <property name="transdate" type="date">
+            <column name="transdate" length="10" not-null="true"/>
+        </property>
+        <property name="projactid" type="string">
+            <column name="projactid" length="20" not-null="true"/>
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="200"/>
+        </property>
+        <property name="acttype" type="string">
+            <column name="acttype" length="10"/>
+        </property>
+        <property name="rateoutput" type="big_decimal">
+            <column name="rateoutput" precision="10"/>
+        </property>
+        <property name="ratehour" type="big_decimal">
+            <column name="ratehour" precision="10"/>
+        </property>
+        <property name="nooutput" type="big_decimal">
+            <column name="nooutput" precision="10"/>
+        </property>
+        <property name="nohours" type="big_decimal">
+            <column name="nohours" precision="10"/>
+        </property>
+        <property name="daywage" type="big_decimal">
+            <column name="daywage" precision="10"/>
+        </property>
+        <property name="chargecode" type="string">
+            <column name="chargecode" length="20"/>
+        </property>
+        <property name="location" type="string">
+            <column name="location" length="20"/>
+        </property>
+        <property name="supervisor" type="string">
+            <column name="supervisor" length="20"/>
+        </property>
+        <property name="transcomment" type="string">
+            <column name="transcomment" length="65535"/>
+        </property>
+        <property name="startdate" type="date">
+            <column name="startdate" length="10" not-null="true"/>
+        </property>
+        <property name="enddate" type="date">
+            <column name="enddate" length="10" not-null="true"/>
+        </property>
+        <property name="sstatus" type="string">
+            <column name="sstatus" length="20"/>
+        </property>
+        <property name="periodid" type="string">
+            <column name="periodid" length="20"/>
+        </property>
+        <property name="deleted" type="integer">
+            <column name="deleted"/>
+        </property>
+    </class>
+</hibernate-mapping>

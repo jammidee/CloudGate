@@ -1,0 +1,304 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <meta attribute="@design.default-queries"/>
+    <query name="qryUserView01" comment="09/08/2012">
+        <query-param name="pEntity" type="java.lang.String"/>
+        from Tbluser  w where w.entityid = :pEntity and w.deleted != 1
+    </query>
+    <query name="qryEntityAsgnView" comment="09/08/2012">
+        <query-param name="pEntity" type="java.lang.String"/>
+        from Tblentityasgn w where w.entityid = :pEntity
+    </query>
+    <query name="qryEmployeeExtUpdate">
+        <query-param name="pParent" type="java.lang.String"/>
+        <query-param name="pBadgeId" type="java.lang.String"/>
+        <query-param name="pDivisionId" type="java.lang.String"/>
+        <query-param name="pDivisionDesc" type="java.lang.String"/>
+        <query-param name="pDepartmentId" type="java.lang.String"/>
+        <query-param name="pDepartmentDesc" type="java.lang.String"/>
+        <query-param name="pSectionId" type="java.lang.String"/>
+        <query-param name="pSectionDesc" type="java.lang.String"/>
+        <query-param name="pLocationId" type="java.lang.String"/>
+        <query-param name="pLocationDesc" type="java.lang.String"/>
+        <query-param name="pRestdayId" type="java.lang.String"/>
+        <query-param name="pRestdayDesc" type="java.lang.String"/>
+        <query-param name="pShiftId" type="java.lang.String"/>
+        <query-param name="pShiftDesc" type="java.lang.String"/>
+        <query-param name="pManagerId" type="java.lang.String"/>
+        <query-param name="pManagerDesc" type="java.lang.String"/>
+        <query-param name="pDeviceIn" type="java.lang.String"/>
+        <query-param name="pDeviceOut" type="java.lang.String"/>
+        <query-param name="pStatus" type="java.lang.String"/>
+        update Tblemployeeext e set e.badgeid = :pBadgeId, e.divisionid = :pDivisionId, e.divisiondesc = :pDivisionDesc, e.departmentid = :pDepartmentId, e.departmentdesc = :pDepartmentDesc, e.sectionid = :pSectionId, e.sectiondesc = :pSectionDesc, e.locationid = :pLocationId, e.locationdesc = :pLocationDesc, e.restdayid = :pRestdayId, e.restdaydesc = :pRestdayDesc, e.shiftid = :pShiftId, e.shiftdesc = :pShiftDesc, e.managerid = :pManagerId, e.managerdesc = :pManagerDesc, e.devicein = :pDeviceIn, e.deviceout = :pDeviceOut, e.sstatus = :pStatus  where  e.parentPerson = :pParent
+    </query>
+    <query name="qryEmployeeExt" comment="12/29/2012">
+        <query-param name="pParent" type="java.lang.String"/>
+        from Tblemployeeext e where e.parentPerson = :pParent
+    </query>
+    <query name="qryUserProfileView" comment="12/24/2012">
+        <query-param name="pUserId" type="java.lang.String"/>
+        from Tbluser  b where b.userid = :pUserId and b.deleted != 1
+    </query>
+    <query name="qryRightAsgnView">
+        <query-param name="pRightId" type="java.lang.String"/>
+        <query-param name="pRoleId" type="java.lang.String"/>
+        <query-param name="pStatus" type="java.lang.String"/>
+        <query-param name="pEntity" type="java.lang.String"/>
+        <query-param name="pAppId" type="java.lang.String"/>
+        from Tblrightasgn b where b.sstatus like :pStatus and b.rightid LIKE  :pRightId || &apos;%&apos; and b.roleid LIKE :pRoleId || &apos;%&apos; and  b.entityid LIKE :pEntity || &apos;%&apos;  and b.appid LIKE :pAppId || &apos;%&apos; order by b.entityid, b.roleid, b.appid, b.rightid
+    </query>
+    <query name="qryUserView01Delete" comment="05/05/2013">
+        <query-param name="pEntity" type="java.lang.String"/>
+        <query-param name="pUserId" type="java.lang.String"/>
+        delete from Tbluser w where w.entityid = :pEntity and w.userid = :pUserId
+    </query>
+    <query name="qryBrowserList" comment="08/19/2012">
+        <query-param name="pEntity" type="java.lang.String"/>
+        from Tblbrowserlist w where w.entityid like :pEntity
+    </query>
+    <query name="qryLogList">
+        <query-param name="pEntity" type="java.lang.String"/>
+        <query-param name="pStart" type="java.sql.Timestamp"/>
+        <query-param name="pEnd" type="java.sql.Timestamp"/>
+        <query-param name="pAppId" type="java.lang.String"/>
+        from Tbllog  b where b.entity like :pEntity and logdatetime &gt;= :pStart and  logdatetime &lt;= :pEnd and appid like :pAppId
+    </query>
+    <query name="qryGetUserRights">
+        <query-param name="pRoleId" type="java.lang.String"/>
+        select t.rightid as rightid from Tblrightasgn t where t.sstatus = &apos;ACTIVE&apos; and roleid in ( :pRoleId )
+    </query>
+    <query name="qryEntity" comment="Querying Entity">
+        from Tblentity t where t.deleted = 0
+    </query>
+    <query name="qryEntitySelect">
+        from Tblentity a where a.sstatus = &apos;ACTIVE&apos;
+    </query>
+    <query name="qryUserView" comment="Tblroleasgn View">
+        <query-param name="pUserId" type="java.lang.String"/>
+        <query-param name="pEntityId" type="java.lang.String"/>
+        <query-param name="pStatus" type="java.lang.String"/>
+        <query-param name="pUsername" type="java.lang.String"/>
+        <query-param name="pEmail" type="java.lang.String"/>
+        from Tbluser b where b.sstatus = :pStatus  and b.deleted = 0 and b.userid LIKE  :pUserId || &apos;%&apos; and b.entityid = :pEntityId and b.username LIKE  :pUsername || &apos;%&apos; and b.email LIKE :pEmail || &apos;%&apos;
+    </query>
+    <query name="qryEmployeeExtDelete" comment="01/14/2013">
+        <query-param name="pEntity" type="java.lang.String"/>
+        <query-param name="pPartyId" type="java.lang.String"/>
+        delete from Tblemployeeext t where t.entityid = :pEntity and t.parentPerson = :pPartyId
+    </query>
+    <query name="qryPersonView" comment="10/22/2012">
+        <query-param name="pEntity" type="java.lang.String"/>
+        <query-param name="pPartyId" type="java.lang.String"/>
+        from Tblperson  w where w.entityid = :pEntity and w.partyid = :pPartyId
+    </query>
+    <query name="qryTblOrgDivisionView" comment="10/01/2012">
+        <query-param name="pEntity" type="java.lang.String"/>
+        from Tblorgdivision w where w.entityid = :pEntity
+    </query>
+    <query name="qryTblOrgDepartmentView" comment="10/01/2012">
+        <query-param name="pEntity" type="java.lang.String"/>
+        from Tblorgdepartment w where w.entityid = :pEntity
+    </query>
+    <query name="qryTblOrgRestdayView" comment="01/06/2013">
+        <query-param name="pEntity" type="java.lang.String"/>
+        from Tblorgrestday w where w.entityid = :pEntity
+    </query>
+    <query name="updEntityAsgnView" comment="09/08/2012">
+        <query-param name="pStatus" type="java.lang.String"/>
+        <query-param name="pEntity" type="java.lang.String"/>
+        <query-param name="pJuid" type="java.lang.String"/>
+        update Tblentityasgn w set w.sstatus = :pStatus where w.entityid  = :pEntity and w.juid = :pJuid
+    </query>
+    <query name="getEntityID">
+        select a.entityid from Tblentity a where a.sstatus = &apos;ACTIVE&apos;
+    </query>
+    <query name="qryPartyDelete" comment="10/25/2012">
+        <query-param name="pEntity" type="java.lang.String"/>
+        <query-param name="pPartyId" type="java.lang.String"/>
+        delete from Tblperson t where t.entityid = :pEntity and t.partyid = :pPartyId
+    </query>
+    <query name="qryRightView" comment="Tblright View">
+        <query-param name="pRightId" type="java.lang.String"/>
+        from Tblrights b where b.sstatus = &apos;ACTIVE&apos;  and b.rightid LIKE:pRightId
+    </query>
+    <query name="qryUserProfileUpdate" comment="12/24/2012">
+        <query-param name="pFirstname" type="java.lang.String"/>
+        <query-param name="pMiddlename" type="java.lang.String"/>
+        <query-param name="pLastname" type="java.lang.String"/>
+        <query-param name="pUserId" type="java.lang.String"/>
+        update Tbluser  b set b.firstname = :pFirstname, b.middlename=:pMiddlename, b.lastname=:pLastname  where b.userid = :pUserId and b.deleted != 1
+    </query>
+    <query name="qryPartyView01" comment="10/25/2012">
+        <query-param name="pEntity" type="java.lang.String"/>
+        from Tblperson  w where w.entityid = :pEntity and w.deleted != 1
+    </query>
+    <query name="qryLogDelete">
+        <query-param name="pJuid" type="java.lang.String"/>
+        delete from Tbllog  b where b.juid = :pJuid
+    </query>
+    <query name="qryAppList" comment="View available applications">
+        <query-param name="pEntity" type="java.lang.String"/>
+        from Tblapplist  b where b.entityid like :pEntity
+    </query>
+    <query name="updAppList">
+        <query-param name="pEntity" type="java.lang.String"/>
+        <query-param name="pAppId" type="java.lang.String"/>
+        <query-param name="pStatus" type="java.lang.String"/>
+        update Tblapplist a  set a.status = :pStatus where a.appid = :pAppId and a.entityid = :pEntity
+    </query>
+    <query name="qryTblOrgLocationView" comment="10/01/2012">
+        <query-param name="pEntity" type="java.lang.String"/>
+        from Tblorglocation w where w.entityid = :pEntity
+    </query>
+    <query name="qryTblUser" comment="Search for Userid">
+        <query-param name="pUserId" type="java.lang.String"/>
+        from Tbluser  b where b.userid = :pUserId and b.deleted != 1
+    </query>
+    <query name="qryTblOrgSectionView" comment="10/01/2012">
+        <query-param name="pEntity" type="java.lang.String"/>
+        from Tblorgsection w where w.entityid = :pEntity
+    </query>
+    <query name="qryRegList" comment="Retrieve Registry information">
+        <query-param name="pEntity" type="java.lang.String"/>
+        from Tblregistry  b where b.entity like :pEntity
+    </query>
+    <query name="qryRoleAsgnView" comment="Tblroleasgn View">
+        <query-param name="pUserId" type="java.lang.String"/>
+        <query-param name="pEntityId" type="java.lang.String"/>
+        <query-param name="pStatus" type="java.lang.String"/>
+        from Tblroleasgn b where b.sstatus = :pStatus  and b.userid = :pUserId and b.entityid = :pEntityId
+    </query>
+    <query name="updUserView01" comment="05/05/2013">
+        <query-param name="pStatus" type="java.lang.String"/>
+        <query-param name="pEntity" type="java.lang.String"/>
+        <query-param name="pUserId" type="java.lang.String"/>
+        update Tbluser w set w.sstatus = :pStatus where w.entityid  = :pEntity and w.userid = :pUserId
+    </query>
+    <query name="qryPartyView" comment="10/25/2012">
+        <query-param name="pStatus" type="java.lang.String"/>
+        <query-param name="pEntityId" type="java.lang.String"/>
+        <query-param name="pEmail" type="java.lang.String"/>
+        <query-param name="pPartyId" type="java.lang.String"/>
+        <query-param name="pFirstName" type="java.lang.String"/>
+        <query-param name="pMiddleName" type="java.lang.String"/>
+        <query-param name="pLastName" type="java.lang.String"/>
+        from Tblperson b where b.sstatus = :pStatus  and b.deleted = 0 and b.partyid LIKE :pPartyId || &apos;%&apos; and b.entityid = :pEntityId and b.firstname LIKE  :pFirstName || &apos;%&apos; and  b.middlename LIKE  :pMiddleName || &apos;%&apos; and b.lastname LIKE  :pLastName || &apos;%&apos; and b.email LIKE :pEmail || &apos;%&apos; order by b.partyid
+    </query>
+    <query name="qryEntityDelete" comment="08/15/2012">
+        <query-param name="pEntity" type="java.lang.String"/>
+        delete from Tblentity t where t.entityid = :pEntity
+    </query>
+    <query name="qryRoleView" comment="Tblrole View">
+        <query-param name="pRoleId" type="java.lang.String"/>
+        <query-param name="pEntityId" type="java.lang.String"/>
+        <query-param name="pStatus" type="java.lang.String"/>
+        from Tblrole b where b.sstatus =:pStatus and b.enddate &gt; NOW() and b.roleid LIKE :pRoleId || &apos;%&apos; and b.entityid = :pEntityId
+    </query>
+    <query name="qryLogDeletePrior">
+        <query-param name="pEntity" type="java.lang.String"/>
+        <query-param name="pAppId" type="java.lang.String"/>
+        <query-param name="pStart" type="java.sql.Timestamp"/>
+        delete from Tbllog  b where b.entity like :pEntity and logdatetime &lt; :pStart and appid like :pAppId order by logdatetime
+    </query>
+    <query name="qRoleView" comment="Tblrole View">
+        from Tbltypereq x
+    </query>
+    <query name="qryUrlAccess" comment="09/11/2012">
+        from Tblaccessurl
+    </query>
+    <query name="qryUserTree">
+        <query-param name="pEntity" type="java.lang.String"/>
+        <query-param name="pUserId" type="java.lang.String"/>
+        from Tbluser  b where b.userid = :pUserId and b.entityid = :pEntity
+    </query>
+    <query name="qrySessionView" comment="11/16/2012">
+        <query-param name="pEntity" type="java.lang.String"/>
+        from Tblsessions a  where a.entityid = :pEntity
+    </query>
+    <query name="updConnProfileView" comment="01/01/2013">
+        <query-param name="pStatus" type="java.lang.String"/>
+        <query-param name="pEntity" type="java.lang.String"/>
+        <query-param name="pJuid" type="java.lang.String"/>
+        update Tblconnprofile w set w.sstatus = :pStatus where w.entityid  = :pEntity and w.juid = :pJuid
+    </query>
+    <query name="getUserByEmail">
+        <query-param name="email" type="java.lang.String"/>
+        from Tbluser as user where user.email = :email
+    </query>
+    <query name="qryTblOrgShiftView" comment="01/06/2013">
+        <query-param name="pEntity" type="java.lang.String"/>
+        from Tblorgshift w where w.entityid = :pEntity
+    </query>
+    <query name="qryPersonViewUpdate" comment="03/24/2013">
+        <query-param name="pEntity" type="java.lang.String"/>
+        <query-param name="pJuid" type="java.lang.String"/>
+        <query-param name="pUserjuid" type="java.lang.String"/>
+        <query-param name="pTitle" type="java.lang.String"/>
+        <query-param name="pFirstName" type="java.lang.String"/>
+        <query-param name="pMiddleName" type="java.lang.String"/>
+        <query-param name="pLastName" type="java.lang.String"/>
+        <query-param name="pSuffix" type="java.lang.String"/>
+        <query-param name="pAddr01" type="java.lang.String"/>
+        <query-param name="pAddr02" type="java.lang.String"/>
+        <query-param name="pCity" type="java.lang.String"/>
+        <query-param name="pEmpState" type="java.lang.String"/>
+        <query-param name="pZipCode" type="java.lang.String"/>
+        <query-param name="pCountry" type="java.lang.String"/>
+        <query-param name="pEmail" type="java.lang.String"/>
+        <query-param name="pCountryCodeHome" type="java.lang.String"/>
+        <query-param name="pAreaCodeHome" type="java.lang.String"/>
+        <query-param name="pPhoneHome" type="java.lang.String"/>
+        <query-param name="pExtensionHome" type="java.lang.String"/>
+        <query-param name="pCountryCodeWork" type="java.lang.String"/>
+        <query-param name="pAreaCodeWork" type="java.lang.String"/>
+        <query-param name="pPhoneWork" type="java.lang.String"/>
+        <query-param name="pExtensionWork" type="java.lang.String"/>
+        <query-param name="pCountryCodeFax" type="java.lang.String"/>
+        <query-param name="pAreaCodeFax" type="java.lang.String"/>
+        <query-param name="pPhoneFax" type="java.lang.String"/>
+        <query-param name="pExtensionFax" type="java.lang.String"/>
+        <query-param name="pCountryCodeMobile" type="java.lang.String"/>
+        <query-param name="pAreaCodeMobile" type="java.lang.String"/>
+        <query-param name="pPhoneMobile" type="java.lang.String"/>
+        <query-param name="pExtensionMobile" type="java.lang.String"/>
+        <query-param name="pPid" type="java.lang.String"/>
+        update Tblperson a  set a.title = :pTitle, a.firstname = :pFirstName, a.middlename = :pMiddleName, a.lastname = :pLastName, a.suffix = :pSuffix, a.addr01  = :pAddr01, a.addr02 = :pAddr02, a.city = :pCity, a.empstate = :pEmpState, a.zipcode = :pZipCode, a.country = :pCountry, a.email = :pEmail, a.userjuid = :pUserjuid, a.pid = :pPid, a.countrycodehome = :pCountryCodeHome, a.areacodehome = :pAreaCodeHome, a.phonehome = :pPhoneHome, a.extensionhome = :pExtensionHome,a.countrycodework = :pCountryCodeWork, a.areacodework = :pAreaCodeWork, a.phonework = :pPhoneWork, a.extensionwork = :pExtensionWork ,a.countrycodefax = :pCountryCodeFax, a.areacodefax = :pAreaCodeFax, a.phonefax = :pPhoneFax, a.extensionfax = :pExtensionFax, a.countrycodemobile = :pCountryCodeMobile, a.areacodemobile = :pAreaCodeMobile, a.phonemobile = :pPhoneMobile, a.extensionmobile = :pExtensionMobile where a.juid = :pJuid and a.entityid = :pEntity
+    </query>
+    <query name="qryMediaLib">
+        <query-param name="pEntity" type="java.lang.String"/>
+        <query-param name="pAppId" type="java.lang.String"/>
+        select entity, appid, userid, filename, filext, filesize, filedate, filesrc, ispicture, ispdf, hasviewer from Tblmedialib  b where b.entity like :pEntity and b.appid = :pAppId
+    </query>
+    <query name="qryConnProfileView" comment="01/01/2013">
+        <query-param name="pEntity" type="java.lang.String"/>
+        from Tblconnprofile w where w.entityid = :pEntity
+    </query>
+    <query name="qryADMappingView" comment="09/24/2012">
+        <query-param name="pEntity" type="java.lang.String"/>
+        from Tbladmapping  w where w.entityid like :pEntity
+    </query>
+    <query name="qryEntityView">
+        select z.entityid as entityid,z.company as company from Tblentity z where z.sstatus = &apos;ACTIVE&apos; and z.enddate &gt; NOW()
+    </query>
+    <query name="qryRightsView" comment="Tblrights View">
+        <query-param name="pRightId" type="java.lang.String"/>
+        <query-param name="pEntityId" type="java.lang.String"/>
+        <query-param name="pStatus" type="java.lang.String"/>
+        <query-param name="pAppId" type="java.lang.String"/>
+        from Tblrights a where a.sstatus = :pStatus and a.rightid LIKE &apos;%&apos; || :pRightId || &apos;%&apos; and a.entityid = :pEntityId and a.appid LIKE :pAppId || &apos;%&apos;
+    </query>
+    <query name="qryEntityAsgnDelete" comment="09/08/2012">
+        <query-param name="pEntity" type="java.lang.String"/>
+        <query-param name="pJuId" type="java.lang.String"/>
+        delete from Tblentityasgn w where w.entityid = :pEntity and w.juid = :pJuId
+    </query>
+    <query name="qryConnProfileDelete" comment="01/01/2013">
+        <query-param name="pEntity" type="java.lang.String"/>
+        <query-param name="pJuId" type="java.lang.String"/>
+        delete from Tblconnprofile w where w.entityid = :pEntity and w.juid = :pJuId
+    </query>
+    <query name="qryBrowserListDelete">
+        <query-param name="pJuid" type="java.lang.String"/>
+        delete from Tblbrowserlist w where w.juid = :pJuid
+    </query>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+{
+	"methods": [{
+		"name": "getUserRoles",
+		"operationType": null,
+		"parameters": [{
+			"name": "pUserId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pEntityId",
+			"type": "java.lang.String"
+		}],
+		"returnType": "[com.dbwaveerp.data.Tblroleasgn]"
+	}, {
+		"name": "loadUserRight",
+		"operationType": null,
+		"parameters": [{
+			"name": "pRoleId",
+			"type": "java.lang.String"
+		}],
+		"returnType": "[com.dbwaveerp.data.Tblrightasgn]"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "svcSecurity.json"
+}

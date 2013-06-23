@@ -1,0 +1,112 @@
+body.tundra .PgConfig .wmlayout .PgConfig-pnlHeader {
+	background-color:#FFFFFF;
+}
+
+body.tundra .PgConfig .wmlayout .PgConfig-pnlTitle {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgConfig .wmlayout .PgConfig-lblTitle {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:14pt;
+}
+
+body.tundra .PgConfig .wmlayout .PgConfig-pnlMenuBar {
+	background-color:#00008B;
+}
+
+body.tundra .PgConfig .wmlayout .PgConfig-pnlFooter {
+	background-color:#00008B;
+}
+
+body.tundra .PgConfig .wmlayout .PgConfig-txtUserId {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:11pt;
+font-weight:bold;
+}
+
+body.tundra .PgConfig .PgConfig-pnlLayoutMain.wmlayout {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgConfig .wmlayout .PgConfig-txtPassword {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+
+
+body.tundra .PgConfig .wmlayout .PgConfig-txtComAdd {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+font-weight:bold;
+}
+
+body.tundra .PgConfig .wmlayout .PgConfig-txtEntId {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+font-weight:bold;
+}
+
+body.tundra .PgConfig .wmlayout .PgConfig-lblMain {
+	font-family: Tahoma;
+}
+
+body.tundra .PgConfig .wmlayout .PgConfig-lblUserInfo {
+	font-family:Tahoma;
+}
+
+body.tundra .PgConfig .wmlayout .PgConfig-lblBorder {
+	font-family:Tahoma;
+}
+
+body.tundra .PgConfig .wmlayout .PgConfig-lblLogout {
+	font-family:Tahoma;
+}
+
+body.tundra .PgConfig .wmlayout .PgConfig-txtUserId {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+
+
+body.tundra .PgConfig .wmlayout .PgConfig-txtComId {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+font-weight:bold;
+}
+

@@ -1,0 +1,84 @@
+body.tundra .PgMainToolsMedia .wmlayout .PgMainToolsMedia-pnlHeader {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainToolsMedia .wmlayout .PgMainToolsMedia-pnlTitle {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainToolsMedia .wmlayout .PgMainToolsMedia-lblTitle {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:14pt;
+}
+
+body.tundra .PgMainToolsMedia .wmlayout .PgMainToolsMedia-pnlMenuBar {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainToolsMedia .wmlayout .PgMainToolsMedia-pnlFooter {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainToolsMedia .wmlayout .PgMainToolsMedia-txtUserId {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainToolsMedia .PgMainToolsMedia-pnlLayoutMain.wmlayout {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainToolsMedia .wmlayout .PgMainToolsMedia-txtPassword {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainToolsMedia .wmlayout .PgMainToolsMedia-lblManageTicket {
+	font-family: Tahoma;
+}
+
+body.tundra .PgMainToolsMedia .wmlayout .PgMainToolsMedia-lblUserInfo {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainToolsMedia .wmlayout .PgMainToolsMedia-lblBorder {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainToolsMedia .wmlayout .PgMainToolsMedia-lblLogout {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainToolsMedia .wmlayout .PgMainToolsMedia-lblSep {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainToolsMedia .wmlayout .PgMainToolsMedia-lblManageUser {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainToolsMedia .wmlayout .PgMainToolsMedia-pnlBody {
+	
+}
+
+body.tundra .PgMainToolsMedia .wmlayout .PgMainToolsMedia-lblManageLookUp {
+	font-family:Tahoma;
+}
+

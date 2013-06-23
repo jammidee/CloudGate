@@ -1,0 +1,84 @@
+body.tundra .PgMainParty .wmlayout .PgMainParty-pnlHeader {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainParty .wmlayout .PgMainParty-pnlTitle {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainParty .wmlayout .PgMainParty-lblTitle {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:14pt;
+}
+
+body.tundra .PgMainParty .wmlayout .PgMainParty-pnlMenuBar {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainParty .wmlayout .PgMainParty-pnlFooter {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainParty .wmlayout .PgMainParty-txtUserId {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainParty .PgMainParty-pnlLayoutMain.wmlayout {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainParty .wmlayout .PgMainParty-txtPassword {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainParty .wmlayout .PgMainParty-lblManageTicket {
+	font-family: Tahoma;
+}
+
+body.tundra .PgMainParty .wmlayout .PgMainParty-lblUserInfo {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainParty .wmlayout .PgMainParty-lblBorder {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainParty .wmlayout .PgMainParty-lblLogout {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainParty .wmlayout .PgMainParty-lblSep {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainParty .wmlayout .PgMainParty-lblManageUser {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainParty .wmlayout .PgMainParty-pnlBody {
+	
+}
+
+body.tundra .PgMainParty .wmlayout .PgMainParty-lblManageLookUp {
+	font-family:Tahoma;
+}
+

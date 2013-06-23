@@ -1,0 +1,85 @@
+body.tundra .PgMain .wmlayout .PgMain-pnlHeader {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMain .wmlayout .PgMain-pnlTitle {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMain .wmlayout .PgMain-lblTitle {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:14pt;
+}
+
+body.tundra .PgMain .wmlayout .PgMain-pnlMenuBar {
+	background-color:#00008B;
+}
+
+body.tundra .PgMain .wmlayout .PgMain-pnlFooter {
+	background-color:#00008B;
+}
+
+body.tundra .PgMain .wmlayout .PgMain-txtUserId {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMain .PgMain-pnlLayoutMain.wmlayout {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMain .wmlayout .PgMain-txtPassword {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMain .wmlayout .PgMain-lblManageTicket {
+	font-family: Tahoma;
+}
+
+body.tundra .PgMain .wmlayout .PgMain-lblUserInfo {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMain .wmlayout .PgMain-lblBorder {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMain .wmlayout .PgMain-lblLogout {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMain .wmlayout .PgMain-lblSep {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMain .wmlayout .PgMain-lblManageUser {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMain .wmlayout .PgMain-pnlBody {
+	background-image:url(resources/images/logos/wavebgnd.gif) !important;
+	background-repeat:no-repeat !important;
+}
+
+body.tundra .PgMain .wmlayout .PgMain-lblManageLookUp {
+	font-family:Tahoma;
+}
+

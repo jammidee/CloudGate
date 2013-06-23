@@ -1,0 +1,84 @@
+body.tundra .PgMainConfigBrowser .wmlayout .PgMainConfigBrowser-pnlHeader {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainConfigBrowser .wmlayout .PgMainConfigBrowser-pnlTitle {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainConfigBrowser .wmlayout .PgMainConfigBrowser-lblTitle {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:14pt;
+}
+
+body.tundra .PgMainConfigBrowser .wmlayout .PgMainConfigBrowser-pnlMenuBar {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainConfigBrowser .wmlayout .PgMainConfigBrowser-pnlFooter {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainConfigBrowser .wmlayout .PgMainConfigBrowser-txtUserId {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainConfigBrowser .PgMainConfigBrowser-pnlLayoutMain.wmlayout {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainConfigBrowser .wmlayout .PgMainConfigBrowser-txtPassword {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainConfigBrowser .wmlayout .PgMainConfigBrowser-lblManageTicket {
+	font-family: Tahoma;
+}
+
+body.tundra .PgMainConfigBrowser .wmlayout .PgMainConfigBrowser-lblUserInfo {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainConfigBrowser .wmlayout .PgMainConfigBrowser-lblBorder {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainConfigBrowser .wmlayout .PgMainConfigBrowser-lblLogout {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainConfigBrowser .wmlayout .PgMainConfigBrowser-lblSep {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainConfigBrowser .wmlayout .PgMainConfigBrowser-lblManageUser {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainConfigBrowser .wmlayout .PgMainConfigBrowser-pnlBody {
+	
+}
+
+body.tundra .PgMainConfigBrowser .wmlayout .PgMainConfigBrowser-lblManageLookUp {
+	font-family:Tahoma;
+}
+

@@ -1,0 +1,84 @@
+body.tundra .PgMainMaintenanceEntity .wmlayout .PgMainMaintenanceEntity-pnlHeader {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainMaintenanceEntity .wmlayout .PgMainMaintenanceEntity-pnlTitle {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainMaintenanceEntity .wmlayout .PgMainMaintenanceEntity-lblTitle {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:14pt;
+}
+
+body.tundra .PgMainMaintenanceEntity .wmlayout .PgMainMaintenanceEntity-pnlMenuBar {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainMaintenanceEntity .wmlayout .PgMainMaintenanceEntity-pnlFooter {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainMaintenanceEntity .wmlayout .PgMainMaintenanceEntity-txtUserId {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainMaintenanceEntity .PgMainMaintenanceEntity-pnlLayoutMain.wmlayout {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainMaintenanceEntity .wmlayout .PgMainMaintenanceEntity-txtPassword {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainMaintenanceEntity .wmlayout .PgMainMaintenanceEntity-lblManageTicket {
+	font-family: Tahoma;
+}
+
+body.tundra .PgMainMaintenanceEntity .wmlayout .PgMainMaintenanceEntity-lblUserInfo {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainMaintenanceEntity .wmlayout .PgMainMaintenanceEntity-lblBorder {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainMaintenanceEntity .wmlayout .PgMainMaintenanceEntity-lblLogout {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainMaintenanceEntity .wmlayout .PgMainMaintenanceEntity-lblSep {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainMaintenanceEntity .wmlayout .PgMainMaintenanceEntity-lblManageUser {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainMaintenanceEntity .wmlayout .PgMainMaintenanceEntity-pnlBody {
+	
+}
+
+body.tundra .PgMainMaintenanceEntity .wmlayout .PgMainMaintenanceEntity-lblManageLookUp {
+	font-family:Tahoma;
+}
+

@@ -1,0 +1,42 @@
+{
+	"methods": [{
+		"name": "execNonQuery",
+		"operationType": null,
+		"parameters": [{
+			"name": "eQuery",
+			"type": "java.lang.String"
+		}],
+		"returnType": "boolean"
+	}, {
+		"name": "writeAppLog",
+		"operationType": null,
+		"parameters": [{
+			"name": "pUserId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pMsg",
+			"type": "java.lang.String"
+		}, {
+			"name": "pModuleId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pAppId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pProcess",
+			"type": "java.lang.String"
+		}, {
+			"name": "pScopeId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pStype",
+			"type": "java.lang.String"
+		}, {
+			"name": "pEntity",
+			"type": "java.lang.String"
+		}],
+		"returnType": "boolean"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "svcLogging.json"
+}

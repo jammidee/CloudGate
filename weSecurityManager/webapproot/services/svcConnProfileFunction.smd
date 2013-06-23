@@ -1,0 +1,74 @@
+{
+	"methods": [{
+		"name": "createConnProfile",
+		"operationType": null,
+		"parameters": [{
+			"name": "pEntityId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pConnId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pDescription",
+			"type": "java.lang.String"
+		}, {
+			"name": "pDbEngine",
+			"type": "java.lang.String"
+		}, {
+			"name": "pDbUrl",
+			"type": "java.lang.String"
+		}, {
+			"name": "pDbDriver",
+			"type": "java.lang.String"
+		}, {
+			"name": "pDbUsername",
+			"type": "java.lang.String"
+		}, {
+			"name": "pDbPassword",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}, {
+		"name": "getConnProfileValue",
+		"operationType": null,
+		"parameters": [{
+			"name": "pConn",
+			"type": "java.lang.String"
+		}, {
+			"name": "pField",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}, {
+		"name": "updateConnProfile",
+		"operationType": null,
+		"parameters": [{
+			"name": "pJuid",
+			"type": "java.lang.String"
+		}, {
+			"name": "pDescription",
+			"type": "java.lang.String"
+		}, {
+			"name": "pDbEngine",
+			"type": "java.lang.String"
+		}, {
+			"name": "pDbUrl",
+			"type": "java.lang.String"
+		}, {
+			"name": "pDbDriver",
+			"type": "java.lang.String"
+		}, {
+			"name": "pDbUsername",
+			"type": "java.lang.String"
+		}, {
+			"name": "pDbPassword",
+			"type": "java.lang.String"
+		}, {
+			"name": "pStatus",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "svcConnProfileFunction.json"
+}

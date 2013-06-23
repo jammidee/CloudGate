@@ -1,0 +1,87 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbwaveerp.data.Tblorgshift" table="tblorgshift" dynamic-insert="false" dynamic-update="false">
+        <id name="juid" type="string">
+            <column name="juid" length="36"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="entityid" type="string">
+            <column name="entityid" length="20"/>
+        </property>
+        <property name="orgid" type="string">
+            <column name="orgid" length="20"/>
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="200"/>
+        </property>
+        <property name="pid" type="string">
+            <column name="pid" length="36"/>
+        </property>
+        <property name="timefrom" type="time">
+            <column name="timefrom" length="8"/>
+        </property>
+        <property name="timeto" type="time">
+            <column name="timeto" length="8"/>
+        </property>
+        <property name="breaktime" type="big_decimal">
+            <column name="breaktime" precision="5"/>
+        </property>
+        <property name="breakstart" type="time">
+            <column name="breakstart" length="8"/>
+        </property>
+        <property name="breakend" type="time">
+            <column name="breakend" length="8"/>
+        </property>
+        <property name="swipepolicy" type="string">
+            <column name="swipepolicy" length="5"/>
+        </property>
+        <property name="axing" type="string">
+            <column name="axing" length="5"/>
+        </property>
+        <property name="flexAllow" type="string">
+            <column name="flexAllow" length="5"/>
+        </property>
+        <property name="flexIn" type="big_decimal">
+            <column name="flexIN" precision="5"/>
+        </property>
+        <property name="flexOut" type="big_decimal">
+            <column name="flexOUT" precision="5"/>
+        </property>
+        <property name="otAllow" type="string">
+            <column name="otAllow" length="5"/>
+        </property>
+        <property name="otMinimum" type="big_decimal">
+            <column name="otMinimum" precision="5"/>
+        </property>
+        <property name="otStart" type="time">
+            <column name="otStart" length="8"/>
+        </property>
+        <property name="otEnd01" type="time">
+            <column name="otEnd01" length="8"/>
+        </property>
+        <property name="otEnd02" type="time">
+            <column name="otEnd02" length="8"/>
+        </property>
+        <property name="otEnd03" type="time">
+            <column name="otEnd03" length="8"/>
+        </property>
+        <property name="diffAllow" type="string">
+            <column name="diffAllow" length="5"/>
+        </property>
+        <property name="diffStart" type="time">
+            <column name="diffStart" length="8"/>
+        </property>
+        <property name="diffEnd01" type="time">
+            <column name="diffEnd01" length="8"/>
+        </property>
+        <property name="diffEnd02" type="time">
+            <column name="diffEnd02" length="8"/>
+        </property>
+        <property name="diffEnd03" type="time">
+            <column name="diffEnd03" length="8"/>
+        </property>
+        <property name="sstatus" type="string">
+            <column name="sstatus" length="20"/>
+        </property>
+    </class>
+</hibernate-mapping>

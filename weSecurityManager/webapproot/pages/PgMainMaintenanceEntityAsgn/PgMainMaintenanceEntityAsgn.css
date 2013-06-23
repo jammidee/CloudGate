@@ -1,0 +1,84 @@
+body.tundra .PgMainMaintenanceEntityAsgn .wmlayout .PgMainMaintenanceEntityAsgn-pnlHeader {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainMaintenanceEntityAsgn .wmlayout .PgMainMaintenanceEntityAsgn-pnlTitle {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainMaintenanceEntityAsgn .wmlayout .PgMainMaintenanceEntityAsgn-lblTitle {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:14pt;
+}
+
+body.tundra .PgMainMaintenanceEntityAsgn .wmlayout .PgMainMaintenanceEntityAsgn-pnlMenuBar {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainMaintenanceEntityAsgn .wmlayout .PgMainMaintenanceEntityAsgn-pnlFooter {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainMaintenanceEntityAsgn .wmlayout .PgMainMaintenanceEntityAsgn-txtUserId {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainMaintenanceEntityAsgn .PgMainMaintenanceEntityAsgn-pnlLayoutMain.wmlayout {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainMaintenanceEntityAsgn .wmlayout .PgMainMaintenanceEntityAsgn-txtPassword {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainMaintenanceEntityAsgn .wmlayout .PgMainMaintenanceEntityAsgn-lblManageTicket {
+	font-family: Tahoma;
+}
+
+body.tundra .PgMainMaintenanceEntityAsgn .wmlayout .PgMainMaintenanceEntityAsgn-lblUserInfo {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainMaintenanceEntityAsgn .wmlayout .PgMainMaintenanceEntityAsgn-lblBorder {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainMaintenanceEntityAsgn .wmlayout .PgMainMaintenanceEntityAsgn-lblLogout {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainMaintenanceEntityAsgn .wmlayout .PgMainMaintenanceEntityAsgn-lblSep {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainMaintenanceEntityAsgn .wmlayout .PgMainMaintenanceEntityAsgn-lblManageUser {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainMaintenanceEntityAsgn .wmlayout .PgMainMaintenanceEntityAsgn-pnlBody {
+	
+}
+
+body.tundra .PgMainMaintenanceEntityAsgn .wmlayout .PgMainMaintenanceEntityAsgn-lblManageLookUp {
+	font-family:Tahoma;
+}
+

@@ -1,0 +1,55 @@
+{
+	"methods": [{
+		"name": "checkRightAsgnExist",
+		"operationType": null,
+		"parameters": [{
+			"name": "pEntityId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pRoleId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pRightId",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}, {
+		"name": "checkRoleAsgnExist",
+		"operationType": null,
+		"parameters": [{
+			"name": "pEntityId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pRoleId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pUserId",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}, {
+		"name": "checkRoleExist",
+		"operationType": null,
+		"parameters": [{
+			"name": "pEntityId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pRoleId",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}, {
+		"name": "checkUserIdExist",
+		"operationType": null,
+		"parameters": [{
+			"name": "pEntityId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pUserId",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "svcExecQueryTksUsrMgt.json"
+}

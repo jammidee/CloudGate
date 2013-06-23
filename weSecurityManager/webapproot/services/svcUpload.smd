@@ -1,0 +1,13 @@
+{
+	"methods": [{
+		"name": "uploading",
+		"operationType": null,
+		"parameters": [{
+			"name": "file",
+			"type": "org.springframework.web.multipart.MultipartFile"
+		}],
+		"returnType": "java.lang.String"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "svcUpload.json"
+}

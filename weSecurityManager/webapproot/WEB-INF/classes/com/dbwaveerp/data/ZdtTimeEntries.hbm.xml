@@ -1,0 +1,28 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbwaveerp.data.ZdtTimeEntries" table="zdt_time_entries" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.dbwaveerp.data.ZdtTimeEntriesId">
+            <key-property name="zbukrs" type="string">
+                <column name="ZBUKRS" length="12"/>
+            </key-property>
+            <key-property name="ztrtyp" type="string">
+                <column name="ZTRTYP" length="6"/>
+            </key-property>
+            <key-property name="zpernr" type="string">
+                <column name="ZPERNR" length="24"/>
+            </key-property>
+            <key-property name="zldate" type="string">
+                <column name="ZLDATE" length="24"/>
+            </key-property>
+            <key-property name="zltime" type="string">
+                <column name="ZLTIME" length="18"/>
+            </key-property>
+            <key-property name="zsatza" type="string">
+                <column name="ZSATZA" length="9"/>
+            </key-property>
+        </composite-id>
+        <property name="zterid" type="string">
+            <column name="ZTERID" length="12" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

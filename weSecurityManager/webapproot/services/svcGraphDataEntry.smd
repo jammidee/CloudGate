@@ -1,0 +1,80 @@
+{
+	"methods": [{
+		"name": "getColCount",
+		"operationType": null,
+		"parameters": null,
+		"returnType": "int"
+	}, {
+		"name": "getDriver",
+		"operationType": null,
+		"parameters": null,
+		"returnType": "java.lang.String"
+	}, {
+		"name": "graphByCountNodes",
+		"operationType": null,
+		"parameters": null,
+		"returnType": "java.lang.String"
+	}, {
+		"name": "graphBySumNodes",
+		"operationType": null,
+		"parameters": null,
+		"returnType": "java.lang.String"
+	}, {
+		"name": "loadDataEntries",
+		"operationType": null,
+		"parameters": null,
+		"returnType": "java.lang.String"
+	}, {
+		"name": "loadDataEntriesSum",
+		"operationType": null,
+		"parameters": null,
+		"returnType": "java.lang.String"
+	}, {
+		"name": "loadGraphData",
+		"operationType": null,
+		"parameters": [{
+			"name": "sqlScript",
+			"type": "java.lang.String"
+		}, {
+			"name": "pMode",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}, {
+		"name": "loadTestData",
+		"operationType": null,
+		"parameters": null,
+		"returnType": "java.lang.String"
+	}, {
+		"name": "loadTestData01",
+		"operationType": null,
+		"parameters": null,
+		"returnType": "java.lang.String"
+	}, {
+		"name": "setColCount",
+		"operationType": null,
+		"parameters": [{
+			"name": "i",
+			"type": "int"
+		}],
+		"returnType": null
+	}, {
+		"name": "setDriver",
+		"operationType": null,
+		"parameters": [{
+			"name": "string",
+			"type": "java.lang.String"
+		}],
+		"returnType": null
+	}, {
+		"name": "setQuerystring",
+		"operationType": null,
+		"parameters": [{
+			"name": "string",
+			"type": "java.lang.String"
+		}],
+		"returnType": null
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "svcGraphDataEntry.json"
+}

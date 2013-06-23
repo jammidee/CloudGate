@@ -1,0 +1,43 @@
+{
+	"methods": [{
+		"name": "erpLog",
+		"operationType": null,
+		"parameters": null,
+		"returnType": "java.lang.String"
+	}, {
+		"name": "erpLog2",
+		"operationType": null,
+		"parameters": [{
+			"name": "pLevel",
+			"type": "java.lang.String"
+		}, {
+			"name": "pMessage",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}, {
+		"name": "erpLog3",
+		"operationType": null,
+		"parameters": [{
+			"name": "pFile",
+			"type": "java.lang.String"
+		}, {
+			"name": "pLevel",
+			"type": "java.lang.String"
+		}, {
+			"name": "pMessage",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}, {
+		"name": "erpLogFileRelativePath",
+		"operationType": null,
+		"parameters": [{
+			"name": "pFile",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "svcLogger.json"
+}

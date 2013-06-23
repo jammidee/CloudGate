@@ -1,0 +1,52 @@
+body.tundra .PgRoleAsgn .wmlayout .PgRoleAsgn-pnlHeader {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgRoleAsgn .wmlayout .PgRoleAsgn-pnlTitle {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgRoleAsgn .wmlayout .PgRoleAsgn-lblTitle {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:14pt;
+}
+
+body.tundra .PgRoleAsgn .wmlayout .PgRoleAsgn-pnlMenuBar {
+	background-color:#00008B;
+}
+
+body.tundra .PgRoleAsgn .wmlayout .PgRoleAsgn-pnlFooter {
+	background-color:#00008B;
+}
+
+
+body.tundra .PgRoleAsgn .PgRoleAsgn-pnlLayoutMain.wmlayout {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+
+
+body.tundra .PgRoleAsgn .wmlayout .PgRoleAsgn-pnlInputFields {
+	
+}
+
+body.tundra .PgRoleAsgn .wmlayout .PgRoleAsgn-pnlBody {
+	background-color:#FFFFFF;
+	color:#666666;
+border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:10pt;
+font-weight:bold;
+}
+

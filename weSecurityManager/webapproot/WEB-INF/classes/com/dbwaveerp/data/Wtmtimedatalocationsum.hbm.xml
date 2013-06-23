@@ -1,0 +1,36 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbwaveerp.data.Wtmtimedatalocationsum" table="wtmtimedatalocationsum" dynamic-insert="false" dynamic-update="false">
+        <id name="juid" type="string">
+            <column name="juid" length="36"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="entityid" type="string">
+            <column name="entityid" length="20"/>
+        </property>
+        <property name="locdate" type="date">
+            <column name="locdate" length="10"/>
+        </property>
+        <property name="loctime" type="time">
+            <column name="loctime" length="8"/>
+        </property>
+        <property name="locdept" type="string">
+            <column name="locdept" length="20"/>
+        </property>
+        <property name="geolon" type="double">
+            <column name="geolon" precision="22"/>
+        </property>
+        <property name="geolat" type="double">
+            <column name="geolat" precision="22"/>
+        </property>
+        <property name="incnt" type="integer">
+            <column name="incnt"/>
+        </property>
+        <property name="outcnt" type="integer">
+            <column name="outcnt"/>
+        </property>
+        <property name="deleted" type="integer">
+            <column name="deleted"/>
+        </property>
+    </class>
+</hibernate-mapping>

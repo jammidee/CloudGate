@@ -1,0 +1,84 @@
+body.tundra .PgMainReportStats .wmlayout .PgMainReportStats-pnlHeader {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainReportStats .wmlayout .PgMainReportStats-pnlTitle {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainReportStats .wmlayout .PgMainReportStats-lblTitle {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:14pt;
+}
+
+body.tundra .PgMainReportStats .wmlayout .PgMainReportStats-pnlMenuBar {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainReportStats .wmlayout .PgMainReportStats-pnlFooter {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainReportStats .wmlayout .PgMainReportStats-txtUserId {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainReportStats .PgMainReportStats-pnlLayoutMain.wmlayout {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainReportStats .wmlayout .PgMainReportStats-txtPassword {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainReportStats .wmlayout .PgMainReportStats-lblManageTicket {
+	font-family: Tahoma;
+}
+
+body.tundra .PgMainReportStats .wmlayout .PgMainReportStats-lblUserInfo {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainReportStats .wmlayout .PgMainReportStats-lblBorder {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainReportStats .wmlayout .PgMainReportStats-lblLogout {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainReportStats .wmlayout .PgMainReportStats-lblSep {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainReportStats .wmlayout .PgMainReportStats-lblManageUser {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainReportStats .wmlayout .PgMainReportStats-pnlBody {
+	
+}
+
+body.tundra .PgMainReportStats .wmlayout .PgMainReportStats-lblManageLookUp {
+	font-family:Tahoma;
+}
+

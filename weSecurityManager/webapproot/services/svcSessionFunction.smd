@@ -1,0 +1,65 @@
+{
+	"methods": [{
+		"name": "countSession",
+		"operationType": null,
+		"parameters": [{
+			"name": "pEntityId",
+			"type": "java.lang.String"
+		}],
+		"returnType": "int"
+	}, {
+		"name": "createNewSession",
+		"operationType": null,
+		"parameters": [{
+			"name": "pEntityId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pAppId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pUserId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pUserName",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}, {
+		"name": "deleteExpiredSession",
+		"operationType": null,
+		"parameters": [{
+			"name": "pEntityId",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}, {
+		"name": "deleteSession",
+		"operationType": null,
+		"parameters": [{
+			"name": "pJuid",
+			"type": "java.lang.String"
+		}],
+		"returnType": "boolean"
+	}, {
+		"name": "timeleftSession",
+		"operationType": null,
+		"parameters": [{
+			"name": "pJuid",
+			"type": "java.lang.String"
+		}, {
+			"name": "timeLeft",
+			"type": "long"
+		}],
+		"returnType": "boolean"
+	}, {
+		"name": "updateSession",
+		"operationType": null,
+		"parameters": [{
+			"name": "pJuid",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "svcSessionFunction.json"
+}

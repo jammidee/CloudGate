@@ -1,0 +1,84 @@
+body.tundra .PgTemplateLeaf .wmlayout .PgTemplateLeaf-pnlHeader {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgTemplateLeaf .wmlayout .PgTemplateLeaf-pnlTitle {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgTemplateLeaf .wmlayout .PgTemplateLeaf-lblTitle {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:14pt;
+}
+
+body.tundra .PgTemplateLeaf .wmlayout .PgTemplateLeaf-pnlMenuBar {
+	background-color:#00008B;
+}
+
+body.tundra .PgTemplateLeaf .wmlayout .PgTemplateLeaf-pnlFooter {
+	background-color:#00008B;
+}
+
+body.tundra .PgTemplateLeaf .wmlayout .PgTemplateLeaf-txtUserId {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgTemplateLeaf .PgTemplateLeaf-pnlLayoutMain.wmlayout {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgTemplateLeaf .wmlayout .PgTemplateLeaf-txtPassword {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgTemplateLeaf .wmlayout .PgTemplateLeaf-lblManageTicket {
+	font-family: Tahoma;
+}
+
+body.tundra .PgTemplateLeaf .wmlayout .PgTemplateLeaf-lblUserInfo {
+	font-family:Tahoma;
+}
+
+body.tundra .PgTemplateLeaf .wmlayout .PgTemplateLeaf-lblBorder {
+	font-family:Tahoma;
+}
+
+body.tundra .PgTemplateLeaf .wmlayout .PgTemplateLeaf-lblLogout {
+	font-family:Tahoma;
+}
+
+body.tundra .PgTemplateLeaf .wmlayout .PgTemplateLeaf-lblSep {
+	font-family:Tahoma;
+}
+
+body.tundra .PgTemplateLeaf .wmlayout .PgTemplateLeaf-lblManageUser {
+	font-family:Tahoma;
+}
+
+body.tundra .PgTemplateLeaf .wmlayout .PgTemplateLeaf-pnlBody {
+	
+}
+
+body.tundra .PgTemplateLeaf .wmlayout .PgTemplateLeaf-lblManageLookUp {
+	font-family:Tahoma;
+}
+

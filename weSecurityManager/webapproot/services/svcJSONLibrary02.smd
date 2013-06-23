@@ -1,0 +1,74 @@
+{
+	"methods": [{
+		"name": "checkChild",
+		"operationType": null,
+		"parameters": [{
+			"name": "strParent",
+			"type": "java.lang.String"
+		}],
+		"returnType": "int"
+	}, {
+		"name": "generateTree",
+		"operationType": null,
+		"parameters": [{
+			"name": "strParent",
+			"type": "java.lang.String"
+		}, {
+			"name": "strDesc",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}, {
+		"name": "getColCount",
+		"operationType": null,
+		"parameters": null,
+		"returnType": "int"
+	}, {
+		"name": "getDriver",
+		"operationType": null,
+		"parameters": null,
+		"returnType": "java.lang.String"
+	}, {
+		"name": "loadData",
+		"operationType": null,
+		"parameters": [{
+			"name": "sesVar",
+			"type": "java.lang.String"
+		}, {
+			"name": "sqlScript",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}, {
+		"name": "loadDataEntries",
+		"operationType": null,
+		"parameters": null,
+		"returnType": "java.lang.String"
+	}, {
+		"name": "setColCount",
+		"operationType": null,
+		"parameters": [{
+			"name": "i",
+			"type": "int"
+		}],
+		"returnType": null
+	}, {
+		"name": "setDriver",
+		"operationType": null,
+		"parameters": [{
+			"name": "string",
+			"type": "java.lang.String"
+		}],
+		"returnType": null
+	}, {
+		"name": "setQuerystring",
+		"operationType": null,
+		"parameters": [{
+			"name": "string",
+			"type": "java.lang.String"
+		}],
+		"returnType": null
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "svcJSONLibrary02.json"
+}

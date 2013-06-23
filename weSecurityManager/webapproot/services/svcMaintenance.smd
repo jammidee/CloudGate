@@ -1,0 +1,57 @@
+{
+	"methods": [{
+		"name": "deleteEntity",
+		"operationType": null,
+		"parameters": null,
+		"returnType": "boolean"
+	}, {
+		"name": "execNonQuery",
+		"operationType": null,
+		"parameters": [{
+			"name": "eQuery",
+			"type": "java.lang.String"
+		}],
+		"returnType": "boolean"
+	}, {
+		"name": "getValue",
+		"operationType": null,
+		"parameters": null,
+		"returnType": "[com.dbwaveerp.data.Tblentity]"
+	}, {
+		"name": "insertEntity",
+		"operationType": null,
+		"parameters": [{
+			"name": "pEntityId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pCompany",
+			"type": "java.lang.String"
+		}, {
+			"name": "pDesc",
+			"type": "java.lang.String"
+		}, {
+			"name": "pAddr01",
+			"type": "java.lang.String"
+		}, {
+			"name": "pAddr02",
+			"type": "java.lang.String"
+		}, {
+			"name": "pAddr03",
+			"type": "java.lang.String"
+		}, {
+			"name": "pStartDate",
+			"type": "java.util.Date"
+		}, {
+			"name": "pEndDate",
+			"type": "java.util.Date"
+		}],
+		"returnType": "boolean"
+	}, {
+		"name": "updateEntity",
+		"operationType": null,
+		"parameters": null,
+		"returnType": "boolean"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "svcMaintenance.json"
+}

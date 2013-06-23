@@ -1,0 +1,15 @@
+{
+	"__metaData": {
+		"service_invalid_svcLogin": false, 
+		"service_invalid_svcRegistry": false, 
+		"service_invalid_svcLogging": false, 
+		"service_invalid_svcMaintenance": false, 
+		"service_invalid_svcViewing": false, 
+		"service_invalid_svcExecGenericNonQuery": false, 
+		"service_invalid_svcExecQuery": false, 
+		"service_invalid_svcExecQueryTksUsrMgt": false, 
+		"service_invalid_svcGenerateRights": false, 
+		"service_invalid_svcSecurity": false, 
+		"service_invalid_svcCreateReport": false
+	}
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbwaveerp.data.Tblstatus" table="tblstatus" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.dbwaveerp.data.TblstatusId">
+            <key-property name="seqid" type="integer">
+                <column name="seqid"/>
+            </key-property>
+            <key-property name="juid" type="string">
+                <column name="juid" length="36"/>
+            </key-property>
+        </composite-id>
+        <property name="entityid" type="string">
+            <column name="entityid" length="20" not-null="true"/>
+        </property>
+        <property name="statusid" type="string">
+            <column name="statusid" length="20" not-null="true"/>
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535"/>
+        </property>
+        <property name="statusorder" type="integer">
+            <column name="statusorder"/>
+        </property>
+        <property name="nextorder" type="integer">
+            <column name="nextorder"/>
+        </property>
+        <property name="startdate" type="timestamp">
+            <column name="startdate" length="19" not-null="true"/>
+        </property>
+        <property name="enddate" type="timestamp">
+            <column name="enddate" length="19" not-null="true"/>
+        </property>
+        <property name="userid" type="string">
+            <column name="userid" length="20" not-null="true"/>
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="200" not-null="true"/>
+        </property>
+        <property name="modeid" type="string">
+            <column name="modeid" length="20" not-null="true"/>
+        </property>
+        <property name="clockon" type="integer">
+            <column name="clockon"/>
+        </property>
+        <property name="deleted" type="integer">
+            <column name="deleted"/>
+        </property>
+        <property name="sstatus" type="string">
+            <column name="sstatus" length="20" not-null="true"/>
+        </property>
+        <property name="userid01" type="string">
+            <column name="userid01" length="20"/>
+        </property>
+        <property name="email01" type="string">
+            <column name="email01" length="200"/>
+        </property>
+        <property name="userid02" type="string">
+            <column name="userid02" length="20"/>
+        </property>
+        <property name="email02" type="string">
+            <column name="email02" length="200"/>
+        </property>
+        <property name="userid03" type="string">
+            <column name="userid03" length="20"/>
+        </property>
+        <property name="email03" type="string">
+            <column name="email03" length="200"/>
+        </property>
+        <property name="userid04" type="string">
+            <column name="userid04" length="20"/>
+        </property>
+        <property name="email04" type="string">
+            <column name="email04" length="200"/>
+        </property>
+        <property name="userid05" type="string">
+            <column name="userid05" length="20"/>
+        </property>
+        <property name="email05" type="string">
+            <column name="email05" length="200"/>
+        </property>
+        <property name="possibleorder" type="string">
+            <column name="possibleorder" length="200"/>
+        </property>
+    </class>
+</hibernate-mapping>

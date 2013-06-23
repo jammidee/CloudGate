@@ -1,0 +1,21 @@
+{
+	"methods": [{
+		"name": "execNonQuery",
+		"operationType": null,
+		"parameters": [{
+			"name": "eQuery",
+			"type": "java.lang.String"
+		}],
+		"returnType": "boolean"
+	}, {
+		"name": "execNonQueryLong",
+		"operationType": null,
+		"parameters": [{
+			"name": "sQuery",
+			"type": "java.lang.String"
+		}],
+		"returnType": "boolean"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "svcExecGenericNonQuery.json"
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbwaveerp.data.Tblconnprofile" table="tblconnprofile" dynamic-insert="false" dynamic-update="false">
+        <id name="juid" type="string">
+            <column name="juid" length="36"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="entityid" type="string">
+            <column name="entityid" length="20"/>
+        </property>
+        <property name="connid" type="string">
+            <column name="connid" length="20"/>
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="200" not-null="true"/>
+        </property>
+        <property name="dbengine" type="string">
+            <column name="dbengine" length="50"/>
+        </property>
+        <property name="dburl" type="string">
+            <column name="dburl" length="200"/>
+        </property>
+        <property name="dbdriver" type="string">
+            <column name="dbdriver" length="200"/>
+        </property>
+        <property name="dbusername" type="string">
+            <column name="dbusername" length="50"/>
+        </property>
+        <property name="dbpassword" type="string">
+            <column name="dbpassword" length="50"/>
+        </property>
+        <property name="sstatus" type="string">
+            <column name="sstatus" length="20"/>
+        </property>
+    </class>
+</hibernate-mapping>

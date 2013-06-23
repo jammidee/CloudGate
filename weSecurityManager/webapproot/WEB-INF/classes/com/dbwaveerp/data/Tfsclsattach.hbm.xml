@@ -1,0 +1,27 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbwaveerp.data.Tfsclsattach" table="tfsclsattach" catalog="dbwaveerp" dynamic-insert="false" dynamic-update="false">
+        <id name="seqid" type="integer">
+            <column name="seqid"/>
+            <generator class="identity"/>
+        </id>
+        <property name="entityid" type="string">
+            <column name="entityid" length="20"/>
+        </property>
+        <property name="classid" type="string">
+            <column name="classid" length="20"/>
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535"/>
+        </property>
+        <property name="attid" type="string">
+            <column name="attid" length="20"/>
+        </property>
+        <property name="filename" type="string">
+            <column name="filename" length="50"/>
+        </property>
+        <property name="bindata" type="string">
+            <column name="bindata" length="20"/>
+        </property>
+    </class>
+</hibernate-mapping>

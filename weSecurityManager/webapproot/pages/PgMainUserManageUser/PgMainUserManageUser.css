@@ -1,0 +1,84 @@
+body.tundra .PgMainUserManageUser .wmlayout .PgMainUserManageUser-pnlHeader {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainUserManageUser .wmlayout .PgMainUserManageUser-pnlTitle {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainUserManageUser .wmlayout .PgMainUserManageUser-lblTitle {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:14pt;
+}
+
+body.tundra .PgMainUserManageUser .wmlayout .PgMainUserManageUser-pnlMenuBar {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainUserManageUser .wmlayout .PgMainUserManageUser-pnlFooter {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainUserManageUser .wmlayout .PgMainUserManageUser-txtUserId {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainUserManageUser .PgMainUserManageUser-pnlLayoutMain.wmlayout {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainUserManageUser .wmlayout .PgMainUserManageUser-txtPassword {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainUserManageUser .wmlayout .PgMainUserManageUser-lblManageTicket {
+	font-family: Tahoma;
+}
+
+body.tundra .PgMainUserManageUser .wmlayout .PgMainUserManageUser-lblUserInfo {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainUserManageUser .wmlayout .PgMainUserManageUser-lblBorder {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainUserManageUser .wmlayout .PgMainUserManageUser-lblLogout {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainUserManageUser .wmlayout .PgMainUserManageUser-lblSep {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainUserManageUser .wmlayout .PgMainUserManageUser-lblManageUser {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainUserManageUser .wmlayout .PgMainUserManageUser-pnlBody {
+	
+}
+
+body.tundra .PgMainUserManageUser .wmlayout .PgMainUserManageUser-lblManageLookUp {
+	font-family:Tahoma;
+}
+

@@ -1,0 +1,12 @@
+Jammi Dee / 05/27/2013
+The folders below must be present. Sometimes, Apache Tomcat do not create an empty folder.
+
+backgnd
+Credits
+reportpdf
+reporttemplates
+repository
+scripts
+temp
+trnFolder
+uploads

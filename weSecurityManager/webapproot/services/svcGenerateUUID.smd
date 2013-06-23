@@ -1,0 +1,15 @@
+{
+	"methods": [{
+		"name": "generateSecureRandomID",
+		"operationType": null,
+		"parameters": null,
+		"returnType": "java.lang.String"
+	}, {
+		"name": "generateUUID",
+		"operationType": null,
+		"parameters": null,
+		"returnType": "java.lang.String"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "svcGenerateUUID.json"
+}

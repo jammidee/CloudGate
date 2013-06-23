@@ -1,0 +1,84 @@
+body.tundra .PgMainConfigSystem .wmlayout .PgMainConfigSystem-pnlHeader {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainConfigSystem .wmlayout .PgMainConfigSystem-pnlTitle {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainConfigSystem .wmlayout .PgMainConfigSystem-lblTitle {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:14pt;
+}
+
+body.tundra .PgMainConfigSystem .wmlayout .PgMainConfigSystem-pnlMenuBar {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainConfigSystem .wmlayout .PgMainConfigSystem-pnlFooter {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainConfigSystem .wmlayout .PgMainConfigSystem-txtUserId {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainConfigSystem .PgMainConfigSystem-pnlLayoutMain.wmlayout {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:14pt;
+}
+
+body.tundra .PgMainConfigSystem .wmlayout .PgMainConfigSystem-txtPassword {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainConfigSystem .wmlayout .PgMainConfigSystem-lblManageTicket {
+	font-family: Tahoma;
+}
+
+body.tundra .PgMainConfigSystem .wmlayout .PgMainConfigSystem-lblUserInfo {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainConfigSystem .wmlayout .PgMainConfigSystem-lblBorder {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainConfigSystem .wmlayout .PgMainConfigSystem-lblLogout {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainConfigSystem .wmlayout .PgMainConfigSystem-lblSep {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainConfigSystem .wmlayout .PgMainConfigSystem-lblManageUser {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainConfigSystem .wmlayout .PgMainConfigSystem-pnlBody {
+	
+}
+
+body.tundra .PgMainConfigSystem .wmlayout .PgMainConfigSystem-lblManageLookUp {
+	font-family:Tahoma;
+}
+

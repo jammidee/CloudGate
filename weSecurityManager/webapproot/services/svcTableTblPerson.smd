@@ -1,0 +1,16 @@
+{
+	"methods": [{
+		"name": "getTableValue",
+		"operationType": null,
+		"parameters": [{
+			"name": "pPartyId",
+			"type": "java.lang.String"
+		}, {
+			"name": "pField",
+			"type": "java.lang.String"
+		}],
+		"returnType": "java.lang.String"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "svcTableTblPerson.json"
+}

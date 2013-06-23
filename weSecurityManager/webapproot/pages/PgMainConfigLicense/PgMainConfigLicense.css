@@ -1,0 +1,84 @@
+body.tundra .PgMainConfigLicense .wmlayout .PgMainConfigLicense-pnlHeader {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainConfigLicense .wmlayout .PgMainConfigLicense-pnlTitle {
+	background-image:url(resources/images/logos/waveerpbar.jpg) !important;
+}
+
+body.tundra .PgMainConfigLicense .wmlayout .PgMainConfigLicense-lblTitle {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:14pt;
+}
+
+body.tundra .PgMainConfigLicense .wmlayout .PgMainConfigLicense-pnlMenuBar {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainConfigLicense .wmlayout .PgMainConfigLicense-pnlFooter {
+	background-color:#00008B;
+}
+
+body.tundra .PgMainConfigLicense .wmlayout .PgMainConfigLicense-txtUserId {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainConfigLicense .PgMainConfigLicense-pnlLayoutMain.wmlayout {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainConfigLicense .wmlayout .PgMainConfigLicense-txtPassword {
+	color:#666666;
+	border: solid #CCCCCC 0; 
+padding:5px; 
+border-bottom-width: 0px;
+font-family: Tahoma;
+font-size:12pt;
+}
+
+body.tundra .PgMainConfigLicense .wmlayout .PgMainConfigLicense-lblManageTicket {
+	font-family: Tahoma;
+}
+
+body.tundra .PgMainConfigLicense .wmlayout .PgMainConfigLicense-lblUserInfo {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainConfigLicense .wmlayout .PgMainConfigLicense-lblBorder {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainConfigLicense .wmlayout .PgMainConfigLicense-lblLogout {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainConfigLicense .wmlayout .PgMainConfigLicense-lblSep {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainConfigLicense .wmlayout .PgMainConfigLicense-lblManageUser {
+	font-family:Tahoma;
+}
+
+body.tundra .PgMainConfigLicense .wmlayout .PgMainConfigLicense-pnlBody {
+	
+}
+
+body.tundra .PgMainConfigLicense .wmlayout .PgMainConfigLicense-lblManageLookUp {
+	font-family:Tahoma;
+}
+

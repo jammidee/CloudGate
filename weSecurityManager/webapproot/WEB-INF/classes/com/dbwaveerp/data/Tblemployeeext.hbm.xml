@@ -1,0 +1,69 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbwaveerp.data.Tblemployeeext" table="tblemployeeext" dynamic-insert="false" dynamic-update="false">
+        <id name="juid" type="string">
+            <column name="juid" length="36"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="entityid" type="string">
+            <column name="entityid" length="20"/>
+        </property>
+        <property name="parentPerson" type="string">
+            <column name="parentPerson" length="36"/>
+        </property>
+        <property name="badgeid" type="string">
+            <column name="badgeid" length="20"/>
+        </property>
+        <property name="divisionid" type="string">
+            <column name="divisionid" length="20"/>
+        </property>
+        <property name="divisiondesc" type="string">
+            <column name="divisiondesc" length="200"/>
+        </property>
+        <property name="departmentid" type="string">
+            <column name="departmentid" length="20"/>
+        </property>
+        <property name="departmentdesc" type="string">
+            <column name="departmentdesc" length="200"/>
+        </property>
+        <property name="sectionid" type="string">
+            <column name="sectionid" length="20"/>
+        </property>
+        <property name="sectiondesc" type="string">
+            <column name="sectiondesc" length="200"/>
+        </property>
+        <property name="locationid" type="string">
+            <column name="locationid" length="20"/>
+        </property>
+        <property name="locationdesc" type="string">
+            <column name="locationdesc" length="200"/>
+        </property>
+        <property name="restdayid" type="string">
+            <column name="restdayid" length="20"/>
+        </property>
+        <property name="restdaydesc" type="string">
+            <column name="restdaydesc" length="200"/>
+        </property>
+        <property name="shiftid" type="string">
+            <column name="shiftid" length="20"/>
+        </property>
+        <property name="shiftdesc" type="string">
+            <column name="shiftdesc" length="200"/>
+        </property>
+        <property name="managerid" type="string">
+            <column name="managerid" length="20"/>
+        </property>
+        <property name="managerdesc" type="string">
+            <column name="managerdesc" length="200"/>
+        </property>
+        <property name="devicein" type="string">
+            <column name="devicein" length="5"/>
+        </property>
+        <property name="deviceout" type="string">
+            <column name="deviceout" length="5"/>
+        </property>
+        <property name="sstatus" type="string">
+            <column name="sstatus" length="20"/>
+        </property>
+    </class>
+</hibernate-mapping>
