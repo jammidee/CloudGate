@@ -6,7 +6,7 @@ import java.util.Date;
 
 /**
  *  dbwaveerp.Wdmdocuments
- *  05/21/2013 13:12:01
+ *  07/17/2013 22:12:24
  * 
  */
 public class Wdmdocuments {
@@ -45,6 +45,10 @@ public class Wdmdocuments {
     private String geodesc;
     private Double geolon;
     private Double geolat;
+    private String dviewid;
+    private Integer ischeckout;
+    private String coutuserid;
+    private Date coutdate;
 
     public String getJuid() {
         return juid;
@@ -316,6 +320,38 @@ public class Wdmdocuments {
 
     public void setGeolat(Double geolat) {
         this.geolat = geolat;
+    }
+
+    public String getDviewid() {
+        return dviewid;
+    }
+
+    public void setDviewid(String dviewid) {
+        this.dviewid = dviewid;
+    }
+
+    public Integer getIscheckout() {
+        return ischeckout;
+    }
+
+    public void setIscheckout(Integer ischeckout) {
+        this.ischeckout = ischeckout;
+    }
+
+    public String getCoutuserid() {
+        return coutuserid;
+    }
+
+    public void setCoutuserid(String coutuserid) {
+        this.coutuserid = coutuserid;
+    }
+
+    public Date getCoutdate() {
+        return coutdate;
+    }
+
+    public void setCoutdate(Date coutdate) {
+        this.coutdate = coutdate;
     }
 
 }

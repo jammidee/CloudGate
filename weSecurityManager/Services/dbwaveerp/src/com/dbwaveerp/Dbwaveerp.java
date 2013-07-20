@@ -2,6 +2,7 @@
 package com.dbwaveerp;
 
 import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 import com.dbwaveerp.data.Tblaccessurl;
 import com.dbwaveerp.data.Tbladmapping;
@@ -38,7 +39,7 @@ import com.wavemaker.runtime.service.TypedServiceReturn;
 
 /**
  *  Operations for service "dbwaveerp"
- *  05/21/2013 23:09:02
+ *  07/17/2013 22:28:41
  * 
  */
 @SuppressWarnings("unchecked")
@@ -292,6 +293,15 @@ public class Dbwaveerp
 
     public List<Tblorgshift> qryTblOrgShiftView(String pEntity, PagingOptions pagingOptions) {
         return ((List<Tblorgshift> ) dsMgr.invoke(taskMgr.getQueryTask(), (DbwaveerpConstants.qryTblOrgShiftViewQueryName), pEntity, pagingOptions));
+    }
+
+    public Integer qryEntityUpdate(String pEntity, String pCompany, String pDesc, String pAddr01, String pAddr02, String pAddr03, Date pStartDate, Date pEndDate, PagingOptions pagingOptions) {
+        List<Integer> rtn = ((List<Integer> ) dsMgr.invoke(taskMgr.getQueryTask(), (DbwaveerpConstants.qryEntityUpdateQueryName), pEntity, pCompany, pDesc, pAddr01, pAddr02, pAddr03, pStartDate, pEndDate, pagingOptions));
+        if (rtn.isEmpty()) {
+            return null;
+        } else {
+            return rtn.get(0);
+        }
     }
 
     public Integer qryPersonViewUpdate(String pEntity, String pJuid, String pUserjuid, String pTitle, String pFirstName, String pMiddleName, String pLastName, String pSuffix, String pAddr01, String pAddr02, String pCity, String pEmpState, String pZipCode, String pCountry, String pEmail, String pCountryCodeHome, String pAreaCodeHome, String pPhoneHome, String pExtensionHome, String pCountryCodeWork, String pAreaCodeWork, String pPhoneWork, String pExtensionWork, String pCountryCodeFax, String pAreaCodeFax, String pPhoneFax, String pExtensionFax, String pCountryCodeMobile, String pAreaCodeMobile, String pPhoneMobile, String pExtensionMobile, String pPid, PagingOptions pagingOptions) {

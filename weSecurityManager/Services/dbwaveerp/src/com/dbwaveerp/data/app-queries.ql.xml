@@ -166,7 +166,7 @@
         <query-param name="pUserId" type="java.lang.String"/>
         <query-param name="pEntityId" type="java.lang.String"/>
         <query-param name="pStatus" type="java.lang.String"/>
-        from Tblroleasgn b where b.sstatus = :pStatus  and b.userid = :pUserId and b.entityid = :pEntityId
+        from Tblroleasgn b where b.sstatus like :pStatus  and b.userid = :pUserId and b.entityid = :pEntityId
     </query>
     <query name="updUserView01" comment="05/05/2013">
         <query-param name="pStatus" type="java.lang.String"/>
@@ -192,7 +192,7 @@
         <query-param name="pRoleId" type="java.lang.String"/>
         <query-param name="pEntityId" type="java.lang.String"/>
         <query-param name="pStatus" type="java.lang.String"/>
-        from Tblrole b where b.sstatus =:pStatus and b.enddate &gt; NOW() and b.roleid LIKE :pRoleId || &apos;%&apos; and b.entityid = :pEntityId
+        from Tblrole b where b.sstatus =:pStatus and b.enddate &gt; NOW() and b.roleid LIKE :pRoleId and b.entityid = :pEntityId
     </query>
     <query name="qryLogDeletePrior">
         <query-param name="pEntity" type="java.lang.String"/>
@@ -228,6 +228,17 @@
     <query name="qryTblOrgShiftView" comment="01/06/2013">
         <query-param name="pEntity" type="java.lang.String"/>
         from Tblorgshift w where w.entityid = :pEntity
+    </query>
+    <query name="qryEntityUpdate" comment="07/05/2013">
+        <query-param name="pEntity" type="java.lang.String"/>
+        <query-param name="pCompany" type="java.lang.String"/>
+        <query-param name="pDesc" type="java.lang.String"/>
+        <query-param name="pAddr01" type="java.lang.String"/>
+        <query-param name="pAddr02" type="java.lang.String"/>
+        <query-param name="pAddr03" type="java.lang.String"/>
+        <query-param name="pStartDate" type="java.util.Date"/>
+        <query-param name="pEndDate" type="java.util.Date"/>
+        update Tblentity a  set a.company = :pCompany, a.description = :pDesc, a.addr01 = :pAddr01, a.addr02 = :pAddr02, a.addr03 = :pAddr03, a.startdate = :pStartDate, a.enddate = :pEndDate where a.entityid = :pEntity
     </query>
     <query name="qryPersonViewUpdate" comment="03/24/2013">
         <query-param name="pEntity" type="java.lang.String"/>

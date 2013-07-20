@@ -20,6 +20,9 @@
         <property name="ownerid" type="string">
             <column name="ownerid" length="20"/>
         </property>
+        <property name="owneremail" type="string">
+            <column name="owneremail" length="200"/>
+        </property>
         <property name="userid" type="string">
             <column name="userid" length="20"/>
         </property>

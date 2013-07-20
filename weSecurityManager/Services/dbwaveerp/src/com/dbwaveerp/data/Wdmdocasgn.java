@@ -6,7 +6,7 @@ import java.util.Date;
 
 /**
  *  dbwaveerp.Wdmdocasgn
- *  05/21/2013 13:12:01
+ *  07/17/2013 22:12:24
  * 
  */
 public class Wdmdocasgn {
@@ -37,6 +37,7 @@ public class Wdmdocasgn {
     private Date startdate;
     private Date enddate;
     private String sstatus;
+    private Integer newentry;
     private Integer deleted;
 
     public String getJuid() {
@@ -245,6 +246,14 @@ public class Wdmdocasgn {
 
     public void setSstatus(String sstatus) {
         this.sstatus = sstatus;
+    }
+
+    public Integer getNewentry() {
+        return newentry;
+    }
+
+    public void setNewentry(Integer newentry) {
+        this.newentry = newentry;
     }
 
     public Integer getDeleted() {

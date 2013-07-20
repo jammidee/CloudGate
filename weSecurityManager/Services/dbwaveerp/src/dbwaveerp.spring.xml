@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Generated 05/21/2013 13:11:56
+<!-- Generated 07/17/2013 22:12:19
 
 Configuration for 'dbwaveerp' database service
 
@@ -161,6 +161,7 @@ Configuration for 'dbwaveerp' database service
 <value>com/dbwaveerp/data/Tblaccessurl.hbm.xml</value>
 <value>com/dbwaveerp/data/Tblroleasgn.hbm.xml</value>
 <value>com/dbwaveerp/data/Wtmtimedatalocation.hbm.xml</value>
+<value>com/dbwaveerp/data/Tblemail.hbm.xml</value>
 <value>com/dbwaveerp/data/Tbltickets.hbm.xml</value>
 <value>com/dbwaveerp/data/Tbluser.hbm.xml</value>
 <value>com/dbwaveerp/data/Wdmsiteasgn.hbm.xml</value>

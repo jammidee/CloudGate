@@ -4,7 +4,7 @@ package com.dbwaveerp.data.output;
 
 
 /**
- * Generated for query "qryEntityView" on 05/21/2013 13:12:22
+ * Generated for query "qryEntityView" on 07/17/2013 22:12:47
  * 
  */
 public class QryEntityViewRtnType {

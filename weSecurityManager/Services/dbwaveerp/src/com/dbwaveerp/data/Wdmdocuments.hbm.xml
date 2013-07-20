@@ -104,5 +104,17 @@
         <property name="geolat" type="double">
             <column name="geolat" precision="22"/>
         </property>
+        <property name="dviewid" type="string">
+            <column name="dviewid" length="36"/>
+        </property>
+        <property name="ischeckout" type="integer">
+            <column name="ischeckout"/>
+        </property>
+        <property name="coutuserid" type="string">
+            <column name="coutuserid" length="20"/>
+        </property>
+        <property name="coutdate" type="date">
+            <column name="coutdate" length="10"/>
+        </property>
     </class>
 </hibernate-mapping>

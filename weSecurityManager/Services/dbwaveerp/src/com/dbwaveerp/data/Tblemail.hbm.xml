@@ -1,0 +1,48 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.dbwaveerp.data.Tblemail" table="tblemail" dynamic-insert="false" dynamic-update="false">
+        <id name="juid" type="string">
+            <column name="juid" length="36"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="entityid" type="string">
+            <column name="entityid" length="20" not-null="true"/>
+        </property>
+        <property name="emldate" type="date">
+            <column name="emldate" length="10"/>
+        </property>
+        <property name="emlfrom" type="string">
+            <column name="emlfrom" length="200"/>
+        </property>
+        <property name="emlto" type="string">
+            <column name="emlto" length="200"/>
+        </property>
+        <property name="emlcc" type="string">
+            <column name="emlcc" length="200"/>
+        </property>
+        <property name="emlbcc" type="string">
+            <column name="emlbcc" length="200"/>
+        </property>
+        <property name="emlsubject" type="string">
+            <column name="emlsubject" length="200"/>
+        </property>
+        <property name="emlbody" type="string">
+            <column name="emlbody" length="65535"/>
+        </property>
+        <property name="emlfolder" type="string">
+            <column name="emlfolder" length="200"/>
+        </property>
+        <property name="userid" type="string">
+            <column name="userid" length="20" not-null="true"/>
+        </property>
+        <property name="priority" type="string">
+            <column name="priority" length="5"/>
+        </property>
+        <property name="sstatus" type="string">
+            <column name="sstatus" length="20"/>
+        </property>
+        <property name="attachid" type="string">
+            <column name="attachid" length="36" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

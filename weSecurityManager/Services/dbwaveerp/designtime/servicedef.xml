@@ -232,6 +232,17 @@
         <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
         <return typeRef="com.dbwaveerp.data.Tblorgshift" isList="true"/>
     </operation>
+    <operation operationType="hqlquery" name="qryEntityUpdate">
+        <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pCompany" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pDesc" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAddr01" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAddr02" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pAddr03" typeRef="java.lang.String" isList="false"/>
+        <parameter name="pStartDate" typeRef="java.util.Date" isList="false"/>
+        <parameter name="pEndDate" typeRef="java.util.Date" isList="false"/>
+        <return typeRef="java.lang.Integer" isList="false"/>
+    </operation>
     <operation operationType="hqlquery" name="qryPersonViewUpdate">
         <parameter name="pEntity" typeRef="java.lang.String" isList="false"/>
         <parameter name="pJuid" typeRef="java.lang.String" isList="false"/>
@@ -519,6 +530,30 @@
             <element name="cell18" typeRef="java.lang.String" isList="false" allowNull="true"/>
             <element name="cell19" typeRef="java.lang.String" isList="false" allowNull="true"/>
             <element name="cell20" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.Tblemail" supportsQuickData="true">
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="entityid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="emldate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="emlfrom" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="emlto" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="emlcc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="emlbcc" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="emlsubject" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="emlbody" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="emlfolder" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="userid" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="priority" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="attachid" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
         <dataobject javaType="com.dbwaveerp.data.Tblemployeeext" supportsQuickData="true">
             <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
@@ -1300,6 +1335,7 @@
             <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
             <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
             <element name="sstatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="newentry" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
             <element name="deleted" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.dbwaveerp.data.Wdmdocasgnheader" supportsQuickData="true">
@@ -1383,6 +1419,10 @@
             <element name="geodesc" typeRef="java.lang.String" isList="false" allowNull="true"/>
             <element name="geolon" typeRef="java.lang.Double" isList="false" allowNull="true"/>
             <element name="geolat" typeRef="java.lang.Double" isList="false" allowNull="true"/>
+            <element name="dviewid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="ischeckout" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="coutuserid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="coutdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.dbwaveerp.data.Wdmdocutype" supportsQuickData="true">
             <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
@@ -1768,6 +1808,7 @@
             <element name="docid" typeRef="java.lang.String" isList="false" allowNull="true"/>
             <element name="docname" typeRef="java.lang.String" isList="false" allowNull="true"/>
             <element name="ownerid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="owneremail" typeRef="java.lang.String" isList="false" allowNull="true"/>
             <element name="userid" typeRef="java.lang.String" isList="false" allowNull="true"/>
             <element name="username" typeRef="java.lang.String" isList="false" allowNull="true"/>
             <element name="useremail" typeRef="java.lang.String" isList="false" allowNull="true"/>
@@ -2249,7 +2290,7 @@
             </element>
             <element name="zterid" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="com.dbwaveerp.data.TblregistryId" name="id" supportsQuickData="false">
+        <dataobject javaType="com.dbwaveerp.data.TbluserId" name="id" supportsQuickData="false">
             <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
                 <require>delete</require>
                 <require>read</require>
@@ -2260,62 +2301,6 @@
                 <noChange>update</noChange>
             </element>
             <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
-                <require>delete</require>
-                <require>read</require>
-                <require>update</require>
-                <require>insert</require>
-                <noChange>delete</noChange>
-                <noChange>read</noChange>
-                <noChange>update</noChange>
-            </element>
-        </dataobject>
-        <dataobject javaType="com.dbwaveerp.data.ZdtTimeEntriesId" name="id" supportsQuickData="false">
-            <element name="zbukrs" typeRef="java.lang.String" isList="false" allowNull="false">
-                <require>delete</require>
-                <require>read</require>
-                <require>update</require>
-                <require>insert</require>
-                <noChange>delete</noChange>
-                <noChange>read</noChange>
-                <noChange>update</noChange>
-            </element>
-            <element name="ztrtyp" typeRef="java.lang.String" isList="false" allowNull="false">
-                <require>delete</require>
-                <require>read</require>
-                <require>update</require>
-                <require>insert</require>
-                <noChange>delete</noChange>
-                <noChange>read</noChange>
-                <noChange>update</noChange>
-            </element>
-            <element name="zpernr" typeRef="java.lang.String" isList="false" allowNull="false">
-                <require>delete</require>
-                <require>read</require>
-                <require>update</require>
-                <require>insert</require>
-                <noChange>delete</noChange>
-                <noChange>read</noChange>
-                <noChange>update</noChange>
-            </element>
-            <element name="zldate" typeRef="java.lang.String" isList="false" allowNull="false">
-                <require>delete</require>
-                <require>read</require>
-                <require>update</require>
-                <require>insert</require>
-                <noChange>delete</noChange>
-                <noChange>read</noChange>
-                <noChange>update</noChange>
-            </element>
-            <element name="zltime" typeRef="java.lang.String" isList="false" allowNull="false">
-                <require>delete</require>
-                <require>read</require>
-                <require>update</require>
-                <require>insert</require>
-                <noChange>delete</noChange>
-                <noChange>read</noChange>
-                <noChange>update</noChange>
-            </element>
-            <element name="zsatza" typeRef="java.lang.String" isList="false" allowNull="false">
                 <require>delete</require>
                 <require>read</require>
                 <require>update</require>
@@ -2435,7 +2420,7 @@
                 <noChange>update</noChange>
             </element>
         </dataobject>
-        <dataobject javaType="com.dbwaveerp.data.TblstatusId" name="id" supportsQuickData="false">
+        <dataobject javaType="com.dbwaveerp.data.TblregistryId" name="id" supportsQuickData="false">
             <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
                 <require>delete</require>
                 <require>read</require>
@@ -2455,8 +2440,8 @@
                 <noChange>update</noChange>
             </element>
         </dataobject>
-        <dataobject javaType="com.dbwaveerp.data.TbluserId" name="id" supportsQuickData="false">
-            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+        <dataobject javaType="com.dbwaveerp.data.ZdtTimeEntriesId" name="id" supportsQuickData="false">
+            <element name="zbukrs" typeRef="java.lang.String" isList="false" allowNull="false">
                 <require>delete</require>
                 <require>read</require>
                 <require>update</require>
@@ -2465,7 +2450,43 @@
                 <noChange>read</noChange>
                 <noChange>update</noChange>
             </element>
-            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+            <element name="ztrtyp" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="zpernr" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="zldate" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="zltime" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="zsatza" typeRef="java.lang.String" isList="false" allowNull="false">
                 <require>delete</require>
                 <require>read</require>
                 <require>update</require>
@@ -2476,6 +2497,26 @@
             </element>
         </dataobject>
         <dataobject javaType="com.dbwaveerp.data.TblticketsId" name="id" supportsQuickData="false">
+            <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element name="juid" typeRef="java.lang.String" isList="false" allowNull="false">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+        </dataobject>
+        <dataobject javaType="com.dbwaveerp.data.TblstatusId" name="id" supportsQuickData="false">
             <element name="seqid" typeRef="java.lang.Integer" isList="false" allowNull="false">
                 <require>delete</require>
                 <require>read</require>

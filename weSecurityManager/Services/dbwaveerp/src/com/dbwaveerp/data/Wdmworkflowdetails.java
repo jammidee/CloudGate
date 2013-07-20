@@ -6,7 +6,7 @@ import java.util.Date;
 
 /**
  *  dbwaveerp.Wdmworkflowdetails
- *  05/21/2013 13:12:01
+ *  07/17/2013 22:12:24
  * 
  */
 public class Wdmworkflowdetails {
@@ -17,6 +17,7 @@ public class Wdmworkflowdetails {
     private String docid;
     private String docname;
     private String ownerid;
+    private String owneremail;
     private String userid;
     private String username;
     private String useremail;
@@ -84,6 +85,14 @@ public class Wdmworkflowdetails {
 
     public void setOwnerid(String ownerid) {
         this.ownerid = ownerid;
+    }
+
+    public String getOwneremail() {
+        return owneremail;
+    }
+
+    public void setOwneremail(String owneremail) {
+        this.owneremail = owneremail;
     }
 
     public String getUserid() {

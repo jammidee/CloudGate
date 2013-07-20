@@ -5,7 +5,7 @@ package com.dbwaveerp;
 
 /**
  *  Query names for service "dbwaveerp"
- *  05/21/2013 23:09:02
+ *  07/17/2013 22:28:41
  * 
  */
 public class DbwaveerpConstants {
@@ -55,6 +55,7 @@ public class DbwaveerpConstants {
     public final static String getTblorglocationByIdQueryName = "getTblorglocationById";
     public final static String getUserByEmailQueryName = "getUserByEmail";
     public final static String qryTblOrgShiftViewQueryName = "qryTblOrgShiftView";
+    public final static String qryEntityUpdateQueryName = "qryEntityUpdate";
     public final static String qryPersonViewUpdateQueryName = "qryPersonViewUpdate";
     public final static String qryMediaLibQueryName = "qryMediaLib";
     public final static String qryConnProfileViewQueryName = "qryConnProfileView";

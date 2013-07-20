@@ -80,6 +80,9 @@
         <property name="sstatus" type="string">
             <column name="sstatus" length="20"/>
         </property>
+        <property name="newentry" type="integer">
+            <column name="newentry"/>
+        </property>
         <property name="deleted" type="integer">
             <column name="deleted"/>
         </property>
